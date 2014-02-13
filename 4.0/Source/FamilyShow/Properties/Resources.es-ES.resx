@@ -1,0 +1,1206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Todos los archivos (*.*)</value>
+  </data>
+  <data name="DefaultStory" xml:space="preserve">
+    <value>Documento de información aquí.</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Exportación</value>
+  </data>
+  <data name="FamilyFiles" xml:space="preserve">
+    <value>Family.Show archivos 2.0 (*. family)</value>
+  </data>
+  <data name="GedcomFailed" xml:space="preserve">
+    <value>Fallo de Importación</value>
+  </data>
+  <data name="GedcomFailedMessage" xml:space="preserve">
+    <value>El GEDCOM no podía ser importado.</value>
+  </data>
+  <data name="GedcomFiles" xml:space="preserve">
+    <value>Archivos de GEDCOM (*. GED)</value>
+  </data>
+  <data name="HeaderImport" xml:space="preserve">
+    <value>Importación</value>
+  </data>
+  <data name="JpegFiles" xml:space="preserve">
+    <value>Formato JPEG (*. jpg)</value>
+  </data>
+  <data name="NotImplemented" xml:space="preserve">
+    <value>El método o la operación no está implementada.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="Person" xml:space="preserve">
+    <value>Persona</value>
+  </data>
+  <data name="NotSavedMessage" xml:space="preserve">
+    <value>¿Desea guardar los cambios en la familia actual?</value>
+  </data>
+  <data name="ConfirmDeletePerson" xml:space="preserve">
+    <value>¿Quieres eliminar a esta persona?</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Guardar como</value>
+  </data>
+  <data name="XpsFiles" xml:space="preserve">
+    <value>Archivos XPS (*. xps)</value>
+  </data>
+  <data name="ConfirmDeleteRelationship" xml:space="preserve">
+    <value>¿Desea eliminar esta relación?</value>
+  </data>
+  <data name="Relationship" xml:space="preserve">
+    <value>Relación</value>
+  </data>
+  <data name="Merge" xml:space="preserve">
+    <value>Combinar</value>
+  </data>
+  <data name="htmlFiles" xml:space="preserve">
+    <value>Hyper Text Markup Language Files (*. html)</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Vínculo</value>
+  </data>
+  <data name="LinkFailed" xml:space="preserve">
+    <value>Link Error</value>
+  </data>
+  <data name="LinkAddMessage" xml:space="preserve">
+    <value>El archivo seleccionado no existe en este archivo familyx. Agregue el archivo en su lugar.</value>
+  </data>
+  <data name="Unsupported" xml:space="preserve">
+    <value>Formato no compatible</value>
+  </data>
+  <data name="UnsupportedPhotoMessage" xml:space="preserve">
+    <value>Sólo *. jpg, *. jpeg, *. png, *. tif, *. tiff o *. gif formatos de imagen soportados.</value>
+  </data>
+  <data name="NoMap" xml:space="preserve">
+    <value>Mapa</value>
+  </data>
+  <data name="ExportResult" xml:space="preserve">
+    <value>Resultados de la exportación</value>
+  </data>
+  <data name="PlacesMessage" xml:space="preserve">
+    <value>¿Quieres ver el archivo en el visor de mapas por defecto?</value>
+  </data>
+  <data name="SourcesExportMessage" xml:space="preserve">
+    <value>¿Quieres ver el archivo en el navegador web por defecto?</value>
+  </data>
+  <data name="kmlFiles" xml:space="preserve">
+    <value>Keyhole Markup Language (*. kml)</value>
+  </data>
+  <data name="ConfirmDeleteSource" xml:space="preserve">
+    <value>¿Desea eliminar esta fuente?</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Fuente</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="AttachmentExists" xml:space="preserve">
+    <value>Este archivo está lista adjunta a esta persona.</value>
+  </data>
+  <data name="ConfirmDeleteAttachment" xml:space="preserve">
+    <value>¿Desea eliminar este archivo adjunto?</value>
+  </data>
+  <data name="Attachment" xml:space="preserve">
+    <value>Adjunto</value>
+  </data>
+  <data name="UnsupportedAttachmentMessage" xml:space="preserve">
+    <value>Por favor, consulte el archivo de ayuda para una lista completa de formatos de archivo adjunto apoyo.</value>
+  </data>
+  <data name="GedcomExportFailedMessage" xml:space="preserve">
+    <value>El archivo familyx no podía ser exportado a GEDCOM.</value>
+  </data>
+  <data name="GedcomExportSucessfulMessage" xml:space="preserve">
+    <value>El archivo familyx fue exportado con éxito a GEDCOM.</value>
+  </data>
+  <data name="PhotoExistsMessage" xml:space="preserve">
+    <value>Esta foto está lista adjunta a esta persona.</value>
+  </data>
+  <data name="ConfirmDeleteRepository" xml:space="preserve">
+    <value>¿Quieres eliminar este depósito?</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Repositorio</value>
+  </data>
+  <data name="InvalidURL" xml:space="preserve">
+    <value>El vínculo no es una URL válida.</value>
+  </data>
+  <data name="ConfirmDeletePhoto" xml:space="preserve">
+    <value>¿Desea eliminar esta foto?</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>Foto</value>
+  </data>
+  <data name="SelectPersonFirstMessage" xml:space="preserve">
+    <value>Seleccione una persona de la primera lista.</value>
+  </data>
+  <data name="AttachmentFiles" xml:space="preserve">
+    <value>Archivos Adjuntos (*. doc, *. docx, *. xls, *. xlsx, *. ppt, *. pptx, *. odp, *. odt, *. ods, *. xps, *. htm, *. html , *. pdf, *. txt, *. kml, *. kmz, *. jpeg, *. jpg, *. png, *. rtf),</value>
+  </data>
+  <data name="ImageExtension" xml:space="preserve">
+    <value>*.jpeg; *.jpg; *.png; *.tif; *.tiff; *.gif</value>
+  </data>
+  <data name="ImageFiles" xml:space="preserve">
+    <value>Los archivos de imagen (*. jpg, *. jpg, *. png, *. tif, *. tiff, *. gif),</value>
+  </data>
+  <data name="ClearRecentFilesMenu" xml:space="preserve">
+    <value>Borrar lista de archivos recientes</value>
+  </data>
+  <data name="ExportingStatus" xml:space="preserve">
+    <value>(Exportador)</value>
+  </data>
+  <data name="GedcomMenu" xml:space="preserve">
+    <value>Importación GEDCOM...</value>
+  </data>
+  <data name="HelpFileName" xml:space="preserve">
+    <value>help.chm</value>
+  </data>
+  <data name="ImportingStatus" xml:space="preserve">
+    <value>(Importación)</value>
+  </data>
+  <data name="LoadingStatus" xml:space="preserve">
+    <value>(Carga)</value>
+  </data>
+  <data name="MergeExistingError" xml:space="preserve">
+    <value>Produjo un error al actualizar la información entre las personas duplicadas.</value>
+  </data>
+  <data name="MergeFailed1" xml:space="preserve">
+    <value>Combinar fracasado. No se han producido cambios.</value>
+  </data>
+  <data name="MergeFailed2" xml:space="preserve">
+    <value>Combinar fracasado. Por favor, vuelva a cargar el archivo original.</value>
+  </data>
+  <data name="MergeMenu" xml:space="preserve">
+    <value>Combinar...</value>
+  </data>
+  <data name="MergingStatus" xml:space="preserve">
+    <value>(Fusionar)</value>
+  </data>
+  <data name="NoExistingAttachments" xml:space="preserve">
+    <value>No hay archivos adjuntos existentes.</value>
+  </data>
+  <data name="NotSupportedExtension1" xml:space="preserve">
+    <value>La extensión *</value>
+  </data>
+  <data name="NotSupportedExtension2" xml:space="preserve">
+    <value>no es compatible.</value>
+  </data>
+  <data name="OpenMenu" xml:space="preserve">
+    <value>Abrir...</value>
+  </data>
+  <data name="ReportHeader1" xml:space="preserve">
+    <value>Familia de</value>
+  </data>
+  <data name="ReportHeader2" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="SaveBeforeMerge" xml:space="preserve">
+    <value>¿Desea guardar los cambios en la familia actual antes de la fusión?</value>
+  </data>
+  <data name="UnableDeleteRepository1" xml:space="preserve">
+    <value>No se puede eliminar del repositorio</value>
+  </data>
+  <data name="UnableDeleteRepository2" xml:space="preserve">
+    <value>como este depósito está vinculada a las fuentes.</value>
+  </data>
+  <data name="UnableDeleteSource1" xml:space="preserve">
+    <value>No se puede eliminar la fuente</value>
+  </data>
+  <data name="UnableDeleteSource2" xml:space="preserve">
+    <value>Mientras que esta fuente está vinculada a las citas.</value>
+  </data>
+  <data name="UnsavedStatus" xml:space="preserve">
+    <value>(Sin guardar)</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>es-ES</value>
+  </data>
+  <data name="NewMenu" xml:space="preserve">
+    <value>Nuevo</value>
+  </data>
+  <data name="ExportGedcomMenu" xml:space="preserve">
+    <value>Exportación GEDCOM...</value>
+  </data>
+  <data name="ExportHtmlMenu" xml:space="preserve">
+    <value>De exportación a HTML...</value>
+  </data>
+  <data name="ExportPlacesMenu" xml:space="preserve">
+    <value>Lugares de exportación...</value>
+  </data>
+  <data name="SaveAsMenu" xml:space="preserve">
+    <value>Guardar como...</value>
+  </data>
+  <data name="AttachmentsMenu" xml:space="preserve">
+    <value>Archivos adjuntos</value>
+  </data>
+  <data name="ContentsMenu" xml:space="preserve">
+    <value>Contenidos</value>
+  </data>
+  <data name="FullScreen" xml:space="preserve">
+    <value>Pantalla completa</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Media" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="PhotosMenu" xml:space="preserve">
+    <value>Fotos</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="PrintMenu" xml:space="preserve">
+    <value>Imprimir...</value>
+  </data>
+  <data name="PrintXPSMenu" xml:space="preserve">
+    <value>Imprimir árbol como XPS...</value>
+  </data>
+  <data name="RepositoriesMenu" xml:space="preserve">
+    <value>Repositorios</value>
+  </data>
+  <data name="SourcesMenu" xml:space="preserve">
+    <value>Fuentes</value>
+  </data>
+  <data name="StatisticsMenu" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="StoriesMenu" xml:space="preserve">
+    <value>Historias</value>
+  </data>
+  <data name="LanguageMenu" xml:space="preserve">
+    <value>Idioma...</value>
+  </data>
+  <data name="ActualText" xml:space="preserve">
+    <value>Texto Actual</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Agregar</value>
+  </data>
+  <data name="AddAFamilyMember" xml:space="preserve">
+    <value>Añadir un miembro de la familia</value>
+  </data>
+  <data name="AddFather" xml:space="preserve">
+    <value>Añadir Padre</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Adjuntos</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Espalda</value>
+  </data>
+  <data name="BirthPlace" xml:space="preserve">
+    <value>Lugar de nacimiento</value>
+  </data>
+  <data name="Born" xml:space="preserve">
+    <value>Nacido</value>
+  </data>
+  <data name="BurialDate" xml:space="preserve">
+    <value>Fecha de Entierro</value>
+  </data>
+  <data name="BurialPlace" xml:space="preserve">
+    <value>Lugar de entierro</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Citations" xml:space="preserve">
+    <value>Citaciones</value>
+  </data>
+  <data name="ConnectAFamilyMemberAs" xml:space="preserve">
+    <value>Conexión de un miembro de la familia</value>
+  </data>
+  <data name="CreateRelationship" xml:space="preserve">
+    <value>Crear relaciones</value>
+  </data>
+  <data name="CremationDate" xml:space="preserve">
+    <value>Fecha de la cremación</value>
+  </data>
+  <data name="CremationPlace" xml:space="preserve">
+    <value>Lugar de la cremación</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+  <data name="DateOfDeath" xml:space="preserve">
+    <value>Fecha de la Muerte</value>
+  </data>
+  <data name="DeathPlace" xml:space="preserve">
+    <value>Lugar de la Muerte</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Hecho</value>
+  </data>
+  <data name="EditAttachments" xml:space="preserve">
+    <value>Edición de archivos adjuntos</value>
+  </data>
+  <data name="EditCitation" xml:space="preserve">
+    <value>Editar citas</value>
+  </data>
+  <data name="EditDetails" xml:space="preserve">
+    <value>Modificar Datos</value>
+  </data>
+  <data name="EditMoreDetails" xml:space="preserve">
+    <value>Más detalles editar</value>
+  </data>
+  <data name="EditPerson" xml:space="preserve">
+    <value>Editar Persona</value>
+  </data>
+  <data name="EditRelationships" xml:space="preserve">
+    <value>Modificar relaciones</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Educación</value>
+  </data>
+  <data name="FamilyData" xml:space="preserve">
+    <value>Familia de datos</value>
+  </data>
+  <data name="FamilySpace" xml:space="preserve">
+    <value>Familia</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Hembra</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtro</value>
+  </data>
+  <data name="FilterColon" xml:space="preserve">
+    <value>Filtro:</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>Desde</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Género</value>
+  </data>
+  <data name="Living" xml:space="preserve">
+    <value>Vida</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Macho</value>
+  </data>
+  <data name="MapToolTip" xml:space="preserve">
+    <value>Búsqueda de un mapa de esta ubicación en el navegador predeterminado.</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Más</value>
+  </data>
+  <data name="NameAge" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Names" xml:space="preserve">
+    <value>Nombre(s)</value>
+  </data>
+  <data name="NewHeader" xml:space="preserve">
+    <value>Añadir el primer familiar</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="Occupation" xml:space="preserve">
+    <value>Ocupación</value>
+  </data>
+  <data name="OfSpace" xml:space="preserve">
+    <value>de </value>
+  </data>
+  <data name="OpenRecent" xml:space="preserve">
+    <value>Abrir reciente</value>
+  </data>
+  <data name="Parents" xml:space="preserve">
+    <value>Los padres</value>
+  </data>
+  <data name="PhotoStory" xml:space="preserve">
+    <value>Fotos</value>
+  </data>
+  <data name="Place" xml:space="preserve">
+    <value>Lugar</value>
+  </data>
+  <data name="Relationships" xml:space="preserve">
+    <value>Relaciones</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religión</value>
+  </data>
+  <data name="RemoveParent" xml:space="preserve">
+    <value>Eliminar los padres</value>
+  </data>
+  <data name="RemoveSibling" xml:space="preserve">
+    <value>Eliminar hermano</value>
+  </data>
+  <data name="RemoveSpouse" xml:space="preserve">
+    <value>Cónyuge Quitar</value>
+  </data>
+  <data name="Restriction" xml:space="preserve">
+    <value>Restricción</value>
+  </data>
+  <data name="Siblings" xml:space="preserve">
+    <value>Hermanos y hermanas</value>
+  </data>
+  <data name="SpousePartner" xml:space="preserve">
+    <value>Cónyuge o pareja</value>
+  </data>
+  <data name="SpousePartnerCitation" xml:space="preserve">
+    <value>Cónyuge/pareja Citaciones</value>
+  </data>
+  <data name="Suffix" xml:space="preserve">
+    <value>Sufijo</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+  <data name="ThemesHeader" xml:space="preserve">
+    <value>Temas</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>Para</value>
+  </data>
+  <data name="ToSpace" xml:space="preserve">
+    <value>para </value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versión </value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenido</value>
+  </data>
+  <data name="WhoAreTheParents" xml:space="preserve">
+    <value>¿Quiénes son los padres?</value>
+  </data>
+  <data name="AboutMenu" xml:space="preserve">
+    <value>Sobre Family.Show</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Tiempo</value>
+  </data>
+  <data name="TagsColon" xml:space="preserve">
+    <value>Etiquetas:</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="ZoomLabel" xml:space="preserve">
+    <value>Zoom</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Edad</value>
+  </data>
+  <data name="AgeDistributions" xml:space="preserve">
+    <value>Distribuciones de edad</value>
+  </data>
+  <data name="AllPeople" xml:space="preserve">
+    <value>Todas las personas</value>
+  </data>
+  <data name="AncestralAnd" xml:space="preserve">
+    <value> ancestrales y </value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continuar</value>
+  </data>
+  <data name="CurrentPerson" xml:space="preserve">
+    <value>Persona actual</value>
+  </data>
+  <data name="CurrentPersonWith" xml:space="preserve">
+    <value>Persona corriente con la</value>
+  </data>
+  <data name="DataQualityColon" xml:space="preserve">
+    <value>Calidad de los datos:</value>
+  </data>
+  <data name="DataStatusColon" xml:space="preserve">
+    <value>Datos Estado:</value>
+  </data>
+  <data name="DeathDate" xml:space="preserve">
+    <value>Fecha de la muerte</value>
+  </data>
+  <data name="DescendantGenerations" xml:space="preserve">
+    <value>generaciones descendientes</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="EnableUTF8" xml:space="preserve">
+    <value>Habilitar el soporte UTF-8</value>
+  </data>
+  <data name="ExportHtml" xml:space="preserve">
+    <value>Exportación HTML</value>
+  </data>
+  <data name="ExportSourcesAndRepositories" xml:space="preserve">
+    <value>Fuentes de exportación y los depósitos de</value>
+  </data>
+  <data name="GenderDistributions" xml:space="preserve">
+    <value>Distribuciones de Género</value>
+  </data>
+  <data name="HideLivingPeople" xml:space="preserve">
+    <value>Ocultar las personas que viven</value>
+  </data>
+  <data name="ImmediateRelatives" xml:space="preserve">
+    <value>Los familiares inmediatos</value>
+  </data>
+  <data name="LivingStatus" xml:space="preserve">
+    <value>Nivel de vida de</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>Localización</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="Stories" xml:space="preserve">
+    <value>Historias</value>
+  </data>
+  <data name="SummaryOfData" xml:space="preserve">
+    <value>Resumen de datos de</value>
+  </data>
+  <data name="SummaryOfEvents" xml:space="preserve">
+    <value>Resumen de Eventos</value>
+  </data>
+  <data name="SummaryOfMedia" xml:space="preserve">
+    <value>Resumen de los Medios de Comunicación</value>
+  </data>
+  <data name="SummaryOfNames" xml:space="preserve">
+    <value>Resumen de los Nombres</value>
+  </data>
+  <data name="UTF1" xml:space="preserve">
+    <value>Family.Show tiene soporte completo para UTF-8 formato de codificación. Desafortunadamente la mayoría de los archivos GEDCOM no están codificados en este formato, de modo durante la importación, Family.Show elimina caracteres que puede no ser capaz de mostrar. Si utiliza un lenguaje que ha ampliado los juegos de caracteres, algunos datos pueden perderse.</value>
+  </data>
+  <data name="UTF2" xml:space="preserve">
+    <value>Sin embargo, es posible convertir archivos en codificación UTF-8 usando programas como el Bloc de notas. Una vez que su archivo está codificado correctamente, UTF verificación Habilitar '-8 de apoyo 'para la ayuda completa de caracteres extendidos.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="BracketRepositoryNameBracket" xml:space="preserve">
+    <value>(Nombre de repositorio)</value>
+  </data>
+  <data name="ChooseWhoToSaveColon" xml:space="preserve">
+    <value>Elegir a quién salvar:</value>
+  </data>
+  <data name="Contains" xml:space="preserve">
+    <value>contiene</value>
+  </data>
+  <data name="CurrentPersonAndImmediateRelatives" xml:space="preserve">
+    <value>Persona actual e inmediata de los familiares</value>
+  </data>
+  <data name="Died" xml:space="preserve">
+    <value>Murió</value>
+  </data>
+  <data name="IfPersons" xml:space="preserve">
+    <value>Si la persona</value>
+  </data>
+  <data name="PrivacyTooltip" xml:space="preserve">
+    <value>Prevenir los detalles de la vida de las personas que se exportan</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Repositories" xml:space="preserve">
+    <value>Repositorios</value>
+  </data>
+  <data name="RepositoryList" xml:space="preserve">
+    <value>Lista de repositorios</value>
+  </data>
+  <data name="SourceList" xml:space="preserve">
+    <value>Lista de fuentes</value>
+  </data>
+  <data name="Sources" xml:space="preserve">
+    <value>Fuentes</value>
+  </data>
+  <data name="SourcesExportTooltip" xml:space="preserve">
+    <value>Permitir que las fuentes y la información del repositorio a la exportación</value>
+  </data>
+  <data name="AddNewImage" xml:space="preserve">
+    <value>Añadir nueva imagen...</value>
+  </data>
+  <data name="DropPhotosIntoThisBox" xml:space="preserve">
+    <value>Suelta las fotos en esta casilla.</value>
+  </data>
+  <data name="LinkExistingImage" xml:space="preserve">
+    <value>Enlace imagen existente...</value>
+  </data>
+  <data name="NoPrimary" xml:space="preserve">
+    <value>No primaria</value>
+  </data>
+  <data name="SetAsPrimary" xml:space="preserve">
+    <value>Establecer como principal</value>
+  </data>
+  <data name="Story" xml:space="preserve">
+    <value>Historia</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="AppendStar" xml:space="preserve">
+    <value>* Anexar a importar nombres de las personas.</value>
+  </data>
+  <data name="ChooseTheLanguageColon" xml:space="preserve">
+    <value>Elija el idioma:</value>
+  </data>
+  <data name="ClickContinue" xml:space="preserve">
+    <value>Haga clic para 'Continuar' para comenzar:</value>
+  </data>
+  <data name="ClickFinish" xml:space="preserve">
+    <value>Haga clic en 'Finalizar' para guardar y ver su archivo:</value>
+  </data>
+  <data name="Danish" xml:space="preserve">
+    <value>Danés</value>
+  </data>
+  <data name="ExistingCitation" xml:space="preserve">
+    <value>Cita existentes</value>
+  </data>
+  <data name="ExistingInformation" xml:space="preserve">
+    <value>La información existente</value>
+  </data>
+  <data name="Field" xml:space="preserve">
+    <value>Campo</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="LanguageChangeMessage" xml:space="preserve">
+    <value>El cambio de idioma tendrá efecto la próxima vez que inicie la aplicación.</value>
+  </data>
+  <data name="LanguageHeader" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="MergeDuplicates" xml:space="preserve">
+    <value>Los duplicados de mezcla</value>
+  </data>
+  <data name="MergeDuplicatesMessage1" xml:space="preserve">
+    <value>Algunas personas existentes en el árbol también en el archivo que se fusionó.</value>
+  </data>
+  <data name="MergeDuplicatesMessage2" xml:space="preserve">
+    <value>En la siguiente pantalla, usted puede actualizar los ya existentes que no es nueva o en conflicto de la información.</value>
+  </data>
+  <data name="NewCitation" xml:space="preserve">
+    <value>Nueva Cita</value>
+  </data>
+  <data name="NewConflicting" xml:space="preserve">
+    <value>Nuevas o información conflictiva</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Saltar</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Resumen</value>
+  </data>
+  <data name="Uncited" xml:space="preserve">
+    <value>No se citan</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Desconocido</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Actualizar</value>
+  </data>
+  <data name="UpdateQuestion" xml:space="preserve">
+    <value>Actualizar?</value>
+  </data>
+  <data name="Adopted" xml:space="preserve">
+    <value>Aprobado</value>
+  </data>
+  <data name="Birth" xml:space="preserve">
+    <value>Nacimiento</value>
+  </data>
+  <data name="Brother" xml:space="preserve">
+    <value>Hermano</value>
+  </data>
+  <data name="Burial" xml:space="preserve">
+    <value>Entierro</value>
+  </data>
+  <data name="ConnectFamilyMember" xml:space="preserve">
+    <value>Conectar Miembro de la familia...</value>
+  </data>
+  <data name="Cremation" xml:space="preserve">
+    <value>Cremación</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="Daughter" xml:space="preserve">
+    <value>Hija</value>
+  </data>
+  <data name="Death" xml:space="preserve">
+    <value>Muerte</value>
+  </data>
+  <data name="Divorce" xml:space="preserve">
+    <value>Divorcio</value>
+  </data>
+  <data name="Father" xml:space="preserve">
+    <value>Padre</value>
+  </data>
+  <data name="Former" xml:space="preserve">
+    <value>Ex</value>
+  </data>
+  <data name="Fostered" xml:space="preserve">
+    <value>Foster</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="Marriage" xml:space="preserve">
+    <value>Matrimonio</value>
+  </data>
+  <data name="Mother" xml:space="preserve">
+    <value>Madre</value>
+  </data>
+  <data name="Natural" xml:space="preserve">
+    <value>Naturales</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Privado</value>
+  </data>
+  <data name="Sister" xml:space="preserve">
+    <value>Hermana</value>
+  </data>
+  <data name="Son" xml:space="preserve">
+    <value>Hijo</value>
+  </data>
+  <data name="Spouse" xml:space="preserve">
+    <value>Cónyuge o pareja</value>
+  </data>
+  <data name="Unrelated" xml:space="preserve">
+    <value>No vinculados</value>
+  </data>
+  <data name="DataSize" xml:space="preserve">
+    <value>Tamaño de datos</value>
+  </data>
+  <data name="Deceased" xml:space="preserve">
+    <value>Fallecido</value>
+  </data>
+  <data name="Divorces" xml:space="preserve">
+    <value>Divorcios</value>
+  </data>
+  <data name="EarliestKnownEvent" xml:space="preserve">
+    <value>Antiguo que se conoce caso</value>
+  </data>
+  <data name="FactsEvents" xml:space="preserve">
+    <value>Resumen/Eventos</value>
+  </data>
+  <data name="LatestKnownEvent" xml:space="preserve">
+    <value>Últimos caso conocido</value>
+  </data>
+  <data name="Marriages" xml:space="preserve">
+    <value>Matrimonios</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>Fotos</value>
+  </data>
+  <data name="StatisticsReport" xml:space="preserve">
+    <value>Estadísticas del Informe</value>
+  </data>
+  <data name="StatisticsReportFor" xml:space="preserve">
+    <value>Informe de Estadísticas de</value>
+  </data>
+  <data name="TopBoysNames" xml:space="preserve">
+    <value>Nombres de los niños</value>
+  </data>
+  <data name="TopGirlsNames" xml:space="preserve">
+    <value>Nombres de las niñas</value>
+  </data>
+  <data name="TopSurnames" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="FamilyStatistics" xml:space="preserve">
+    <value>Estadísticas de la Familia</value>
+  </data>
+  <data name="HasAttachments" xml:space="preserve">
+    <value>Esta persona no tiene archivos adjuntos.</value>
+  </data>
+  <data name="HasCitations" xml:space="preserve">
+    <value>Esta persona no tiene citas.</value>
+  </data>
+  <data name="HasNotes" xml:space="preserve">
+    <value>Esta persona tiene una nota.</value>
+  </data>
+  <data name="HasPhotos" xml:space="preserve">
+    <value>Esta persona no tiene fotos.</value>
+  </data>
+  <data name="HasRestrictions" xml:space="preserve">
+    <value>Esta persona tiene una restricción.</value>
+  </data>
+  <data name="HideAncestors" xml:space="preserve">
+    <value>Ocultar antepasados</value>
+  </data>
+  <data name="HideAuntsAndUncles" xml:space="preserve">
+    <value>Ocultar tías y tíos</value>
+  </data>
+  <data name="HideCurrentSpouse" xml:space="preserve">
+    <value>Ocultar cónyuge actual</value>
+  </data>
+  <data name="HideDates" xml:space="preserve">
+    <value>Ocultar las fechas</value>
+  </data>
+  <data name="HideDescendants" xml:space="preserve">
+    <value>Ocultar descendientes</value>
+  </data>
+  <data name="HideInLaws" xml:space="preserve">
+    <value>Ocultar en las leyes</value>
+  </data>
+  <data name="HidePreviousSpouses" xml:space="preserve">
+    <value>Ocultar los cónyuges anteriores</value>
+  </data>
+  <data name="HideSiblings" xml:space="preserve">
+    <value>Ocultar los hermanos</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="IsLivingQuestion" xml:space="preserve">
+    <value>Está vivo?</value>
+  </data>
+  <data name="ShowAllGenerations" xml:space="preserve">
+    <value>Mostrar todas las generaciones</value>
+  </data>
+  <data name="ShowBloodlines" xml:space="preserve">
+    <value>Mostrar líneas de sangre</value>
+  </data>
+  <data name="ShowGenerationOutline" xml:space="preserve">
+    <value>Mostrar la generación de líneas</value>
+  </data>
+  <data name="ShowImmediateFamilyOnly" xml:space="preserve">
+    <value>Mostrar sólo la familia inmediata</value>
+  </data>
+  <data name="ShowPhotos" xml:space="preserve">
+    <value>Muestra las fotos</value>
+  </data>
+  <data name="Birthdays" xml:space="preserve">
+    <value>Cumpleaños</value>
+  </data>
+  <data name="Surnames" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="PrivateRecord" xml:space="preserve">
+    <value>Registro Privado</value>
+  </data>
+  <data name="AddOrSubtract" xml:space="preserve">
+    <value>Sumar o restar</value>
+  </data>
+  <data name="AgeBirthDeath" xml:space="preserve">
+    <value>Las edades, Nacimientos</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Negro</value>
+  </data>
+  <data name="Calculate" xml:space="preserve">
+    <value>Calcular</value>
+  </data>
+  <data name="DateCalculator" xml:space="preserve">
+    <value>Calculadora de la fecha</value>
+  </data>
+  <data name="DateCalculatorMenu" xml:space="preserve">
+    <value>Calculadora de la fecha</value>
+  </data>
+  <data name="DateCalculatorMessage" xml:space="preserve">
+    <value>Utilizar esta herramienta para ayudar con el cálculo de fechas de las pruebas que ha reunido.</value>
+  </data>
+  <data name="DateTo" xml:space="preserve">
+    <value>para</value>
+  </data>
+  <data name="days" xml:space="preserve">
+    <value>día</value>
+  </data>
+  <data name="months" xml:space="preserve">
+    <value>mes</value>
+  </data>
+  <data name="Silver" xml:space="preserve">
+    <value>Plata</value>
+  </data>
+  <data name="Subtract" xml:space="preserve">
+    <value>Restar</value>
+  </data>
+  <data name="years" xml:space="preserve">
+    <value>año</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Enlaces</value>
+  </data>
+  <data name="StartANewFamilyTree" xml:space="preserve">
+    <value>Iniciar un nuevo árbol de familia...</value>
+  </data>
+  <data name="HideControls" xml:space="preserve">
+    <value>Ocultar los controles de diagrama</value>
+  </data>
+  <data name="SavingStatus" xml:space="preserve">
+    <value>(Guardar)</value>
+  </data>
+  <data name="DropPhotosHere" xml:space="preserve">
+    <value>Suelta las fotos aquí.</value>
+  </data>
+  <data name="Discussion" xml:space="preserve">
+    <value>Gente</value>
+  </data>
+  <data name="Homepage" xml:space="preserve">
+    <value>Página de inicio</value>
+  </data>
+  <data name="NoExistingPhotos" xml:space="preserve">
+    <value>No hay fotos existentes.</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>Discusión</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>año</value>
+  </data>
+  <data name="CurrentPersonOnly" xml:space="preserve">
+    <value>Persona corriente sólo </value>
+  </data>
+  <data name="ExtractHeader" xml:space="preserve">
+    <value>Extracto de contenidos</value>
+  </data>
+  <data name="OpenFolderAfterExtraction" xml:space="preserve">
+    <value>Abrir carpeta después de la extracción de</value>
+  </data>
+  <data name="ExtractingStatus" xml:space="preserve">
+    <value>(Extracción)</value>
+  </data>
+  <data name="ChooseWhatToExtractColon" xml:space="preserve">
+    <value>Elija lo que para extraer:</value>
+  </data>
+  <data name="ExtractFilesMenu" xml:space="preserve">
+    <value>Extracto de contenidos...</value>
+  </data>
+  <data name="Extract" xml:space="preserve">
+    <value>Extracto</value>
+  </data>
+  <data name="HideFiltered" xml:space="preserve">
+    <value>Ocultar filtrada</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>Eventos</value>
+  </data>
+  <data name="ExportPlaces" xml:space="preserve">
+    <value>Lugares de exportación</value>
+  </data>
+  <data name="DoYouWantToHideLivingPeople" xml:space="preserve">
+    <value>¿Quieres ocultar vida de la gente?</value>
+  </data>
+  <data name="AlignCenter" xml:space="preserve">
+    <value>Centro  (Ctrl+E)</value>
+  </data>
+  <data name="AlignJustify" xml:space="preserve">
+    <value>Justificar (Ctrl+J)</value>
+  </data>
+  <data name="AlignLeft" xml:space="preserve">
+    <value>Alinear texto a la izquierda (Ctrl+L)</value>
+  </data>
+  <data name="AlignRight" xml:space="preserve">
+    <value>Alinear texto a la derecha (Ctrl+R)</value>
+  </data>
+  <data name="Births" xml:space="preserve">
+    <value>Nacimientos</value>
+  </data>
+  <data name="Burials" xml:space="preserve">
+    <value>Enterramientos</value>
+  </data>
+  <data name="ChooseWhatToExportColon" xml:space="preserve">
+    <value>Elija lo que la exportación:</value>
+  </data>
+  <data name="Cremations" xml:space="preserve">
+    <value>Cremaciones</value>
+  </data>
+  <data name="Deaths" xml:space="preserve">
+    <value>Muertes</value>
+  </data>
+  <data name="DecreaseIndentation" xml:space="preserve">
+    <value>Reducir Sangría</value>
+  </data>
+  <data name="GrowFont" xml:space="preserve">
+    <value>Crecer Fuente (Ctrl+&gt;)</value>
+  </data>
+  <data name="IncreaseIndentation" xml:space="preserve">
+    <value>Aumentar Sangría</value>
+  </data>
+  <data name="Italic" xml:space="preserve">
+    <value>Italic (Ctrl+I)</value>
+  </data>
+  <data name="Lifetimes" xml:space="preserve">
+    <value>Vidas</value>
+  </data>
+  <data name="Numbering" xml:space="preserve">
+    <value>Numeración</value>
+  </data>
+  <data name="Places" xml:space="preserve">
+    <value>Lugares</value>
+  </data>
+  <data name="PlacesWithTimes" xml:space="preserve">
+    <value>Lugares con tiempos de</value>
+  </data>
+  <data name="ShrinkFont" xml:space="preserve">
+    <value>Reducir Fuente (Ctrl+&lt;)</value>
+  </data>
+  <data name="Tiebreak" xml:space="preserve">
+    <value>* Indica un tie-break.</value>
+  </data>
+  <data name="Underline" xml:space="preserve">
+    <value>Subrayado (Ctrl+U)</value>
+  </data>
+  <data name="ClearFilterText" xml:space="preserve">
+    <value>Texto del filtro abierto.</value>
+  </data>
+  <data name="Compatability" xml:space="preserve">
+    <value>Compatibilidad</value>
+  </data>
+  <data name="OldVersionMessage" xml:space="preserve">
+    <value>Este archivo se creó con una versión anterior de Family.Show. Se guardará en un nuevo formato para el uso con esta versión. El nombre del nuevo fichero termina con. Familyx y todas las fotos de la familia de su paquete, las historias y los árboles en este archivo único.</value>
+  </data>
+  <data name="FamilyxFiles" xml:space="preserve">
+    <value>Family.Show archivos 4.0 (*. familyx)</value>
+  </data>
+  <data name="FamilyShowFiles" xml:space="preserve">
+    <value>Family.Show archivos (*. familyx)</value>
+  </data>
+  <data name="FamilyxFilesAll" xml:space="preserve">
+    <value>Family.Show archivos 3.0 - 4.0 (*. familyx)</value>
+  </data>
+</root>

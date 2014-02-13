@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllExtension" xml:space="preserve">
+    <value>*.*</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>All Files (*.*)</value>
+  </data>
+  <data name="DefaultFamilyExtension" xml:space="preserve">
+    <value>.family</value>
+  </data>
+  <data name="DefaultGedcomExtension" xml:space="preserve">
+    <value>.ged</value>
+  </data>
+  <data name="DefaultStory" xml:space="preserve">
+    <value>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam in lorem ut ante iaculis dictum. Maecenas suscipit velit at diam. Cras ac enim. Curabitur neque erat, faucibus in, tempus at, consequat non, turpis. Aliquam erat volutpat. Nunc ligula metus, semper ac, ultricies at, commodo molestie, nisl. Morbi felis elit, feugiat et, volutpat nec, vulputate vitae, dolor. Nam mauris nulla, adipiscing sodales, pulvinar in, sodales vitae, odio. Sed eu pede. Vivamus ac augue id felis porta bibendum. Sed sapien odio, lacinia ac, sodales eu, gravida sit amet, libero. Pellentesque ornare, est vitae tincidunt aliquam, purus dolor tincidunt lorem, ac pulvinar odio purus et lacus. Sed pulvinar lectus vitae massa. Donec at arcu id dui lobortis dignissim. Aliquam vulputate pulvinar tellus. Cras nec turpis at tortor sodales commodo. Aenean facilisis cursus leo.
+
+Vivamus adipiscing sollicitudin eros. Vivamus ac nunc eu mauris fermentum bibendum. Suspendisse fringilla eleifend enim. Integer vulputate arcu ut pede. Ut consectetuer ultricies diam. Donec elementum aliquet diam. Curabitur dignissim. Sed ultricies est sit amet ipsum. Etiam dolor. Ut ante arcu, commodo non, pulvinar id, consequat a, velit. Nulla mattis. Suspendisse gravida congue mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer nunc lacus, sagittis eu, blandit sed, placerat suscipit, ligula. Suspendisse luctus, tellus adipiscing porta nonummy, dui nisl lobortis orci, non blandit elit massa eget leo. Sed laoreet, odio et vulputate hendrerit, leo est ornare nunc, eget malesuada justo ipsum in sem.
+
+Phasellus est nibh, ultrices sed, ultricies vitae, consectetuer ut, sem. Vivamus sagittis suscipit purus. Maecenas sapien justo, iaculis sit amet, luctus ut, laoreet in, elit. Donec pretium lacus. Suspendisse a est. Suspendisse a pede. Phasellus eget ipsum eget sapien mollis ullamcorper. Nunc nonummy. Duis nec quam vitae pede nonummy dignissim. Suspendisse eget erat. Fusce non risus at augue viverra viverra. Phasellus placerat, lectus a scelerisque luctus, mi nisl aliquet felis, non convallis ante urna eu augue. Donec porta est eu eros. Aenean dignissim. Vivamus quam. Fusce purus magna, rhoncus vel, suscipit vitae, gravida in, quam. Proin tristique adipiscing neque. Morbi at massa.
+
+Curabitur sit amet risus. Quisque eget diam. Ut risus. Aenean diam. Nulla mattis. Proin ultricies. Fusce facilisis nibh ut dolor. Etiam ipsum. Curabitur vitae tortor. Integer malesuada ullamcorper odio. Ut nibh neque, lobortis vitae, tempus a, vestibulum quis, augue. In enim velit, vehicula sed, consequat in, commodo quis, libero. Suspendisse ullamcorper. Morbi lorem. Pellentesque viverra tortor et velit. Aliquam erat volutpat. Cras tortor lorem, sagittis sit amet, ultricies eu, faucibus quis, leo. Quisque vitae elit.
+
+Proin ut metus. Nulla diam. Proin pretium. Nam tincidunt commodo urna. Mauris lorem est, commodo id, facilisis vitae, bibendum quis, augue. Sed id justo. Quisque fermentum sem id odio. Sed fringilla mattis neque. Praesent quam neque, aliquet a, lacinia in, vehicula vitae, arcu. Nunc accumsan. Cras mattis nisl in diam. Ut sem dui, imperdiet a, egestas sed, iaculis eu, leo. Sed non massa a lorem condimentum volutpat. Etiam aliquet nisl nec lectus. Pellentesque dui. Cras tincidunt, mauris sit amet convallis dignissim, dolor ante aliquam neque, consequat pulvinar mi velit sed mauris. Maecenas nonummy risus in dolor. Maecenas id libero et mauris sollicitudin eleifend. Nulla facilisi. Aenean justo purus, adipiscing ac, placerat vitae, laoreet at, nisl.
+
+Ut luctus, elit ullamcorper aliquam aliquet, odio est luctus nulla, lacinia laoreet erat ante quis est. Fusce risus est, pharetra quis, suscipit et, fringilla sed, libero. Etiam urna nisl, lacinia et, volutpat posuere, ultricies vel, diam. Donec at purus sit amet massa adipiscing dignissim. Vestibulum et diam consectetuer enim sollicitudin condimentum. Aliquam at lectus vel sapien dictum egestas. Nunc a elit. Vivamus hendrerit molestie dolor. Nam tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla fringilla eros vitae ante ornare rhoncus. Suspendisse dictum massa in dolor. In dolor. Nunc id massa.
+
+Morbi ultricies diam non mauris. Nulla mattis tellus non arcu. Praesent euismod, enim quis lobortis facilisis, turpis arcu venenatis urna, quis tempus ligula elit sed diam. Vestibulum quis odio. Aenean elit enim, aliquam sit amet, tincidunt id, iaculis quis, leo. Mauris odio diam, cursus et, congue eget, consectetuer sed, neque. Integer vel nunc. Curabitur auctor pretium enim. Suspendisse iaculis magna non justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque egestas velit. Fusce dolor ipsum, tristique rhoncus, fermentum et, aliquet eu, ipsum. Sed purus.
+
+Nullam convallis euismod ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse malesuada lacus ut velit. Pellentesque diam. Pellentesque diam nisl, molestie a, varius ut, blandit eu, mi. Nam pede nibh, scelerisque tincidunt, semper ut, pulvinar in, nibh. Praesent varius. Nulla faucibus, ipsum sit amet ultricies suscipit, nisl odio pharetra ipsum, et suscipit dui nibh quis erat. Nulla non neque. Nullam justo urna, interdum quis, ornare a, dictum vitae, elit. In vulputate tortor et elit egestas congue.</value>
+  </data>
+  <data name="DefaultXpsExtension" xml:space="preserve">
+    <value>.xps</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FamilyExtension" xml:space="preserve">
+    <value>*.family</value>
+  </data>
+  <data name="FamilyFiles" xml:space="preserve">
+    <value>Family.Show Files (.family)</value>
+  </data>
+  <data name="GedcomExtension" xml:space="preserve">
+    <value>*.ged</value>
+  </data>
+  <data name="GedcomFailed" xml:space="preserve">
+    <value>Import Failed</value>
+  </data>
+  <data name="GedcomFailedMessage" xml:space="preserve">
+    <value>The GEDCOM file could not be imported.</value>
+  </data>
+  <data name="GedcomFiles" xml:space="preserve">
+    <value>Gedcom Files (.ged)</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="JpegExtension" xml:space="preserve">
+    <value>*.jpg</value>
+  </data>
+  <data name="JpegFiles" xml:space="preserve">
+    <value>Family.Show Files (.jpg)</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="KennedySampleFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kennedy.ged;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NotImplemented" xml:space="preserve">
+    <value>The method or operation is not implemented.</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NotSavedMessage" xml:space="preserve">
+    <value>The current family has not been saved. Do you want to save?</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="PngExtension" xml:space="preserve">
+    <value>*.png</value>
+  </data>
+  <data name="PngFiles" xml:space="preserve">
+    <value>Family.Show Files (.png)</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="WindsorSampleFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Windsor.family;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="XpsExtension" xml:space="preserve">
+    <value>*.xps</value>
+  </data>
+  <data name="XpsFiles" xml:space="preserve">
+    <value>Xps Files (.xps)</value>
+  </data>
+</root>

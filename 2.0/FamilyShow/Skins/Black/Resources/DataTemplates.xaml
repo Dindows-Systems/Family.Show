@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Microsoft.FamilyShowLib="clr-namespace:Microsoft.FamilyShowLib;assembly=FamilyShowLib"
+    >
+
+  <!-- This is the style for the photo in the list of photos on the PersonInfo control -->
+  <DataTemplate DataType="{x:Type Microsoft.FamilyShowLib:Photo}">
+    <Grid>
+      <Border VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2" DockPanel.Dock="Top" >
+        <Image Source="{Binding FullyQualifiedPath}" Stretch="UniformToFill" MaxHeight="65" MaxWidth="65" MinHeight="65" MinWidth="65"/>
+      </Border>
+      <TextBlock Text="{Binding IsAvatar, Converter={StaticResource PrimaryAvatarConverter}}" DockPanel.Dock="Bottom" Foreground="#FF000000" HorizontalAlignment="Right" Margin="0,-10,5,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" />
+    </Grid>
+  </DataTemplate>
+
+  <!-- TagsList ItemTemplate-->
+  <DataTemplate x:Key="TagsItemTemplate">
+    <TextBlock Text="{Binding}" Foreground="{StaticResource FontColor}" />
+  </DataTemplate>
+
+  <DataTemplate x:Key="FamilyDataListTemplate">
+    <TextBlock Text="{Binding Path=Name, Mode=Default, FallbackValue=Name}" HorizontalAlignment="Left" Width="Auto" Height="Auto" Foreground="#FFFA6E15" FontSize="11" Margin="10,0,0,0"/>
+  </DataTemplate>
+  
+</ResourceDictionary>

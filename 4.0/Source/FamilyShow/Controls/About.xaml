@@ -1,0 +1,48 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2006" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Microsoft.FamilyShow.About" >
+
+    <StackPanel>
+
+        <!-- Header -->
+        <Border Padding="5,0,5,0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0" Height="30" MinWidth="300" Width="Auto">
+            <Grid>
+                <TextBlock Padding="4,0,0,0" Text="{x:Static properties:Resources.About}" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" FontSize="18" FontWeight="Bold" d:LayoutOverrides="Height" VerticalAlignment="Center"/>
+            <Button Content="X" x:Name="CloseButton" Click="CloseButton_Click"  Height="15"  HorizontalAlignment="Right" Width="15" Style="{DynamicResource RedButtonStyle}"/>
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1">
+            <StackPanel Height="215" Background="{DynamicResource InputBackgroundBrush}">
+                <StackPanel Orientation="Horizontal" Margin="10,5,0,0">
+                    <Image Margin="-3,2,3,0"  Source="..\FamilyShow.ico" Height="25"/>
+                    <Label FontWeight="Bold" FontSize="13" Foreground="{DynamicResource InputFontColor}" Content="{x:Static properties:Resources.FamilyShow}"/>
+                    <!-- Company logos -->
+                    <Rectangle Fill="{DynamicResource OGITREV}" Stroke="{x:Null}" x:Name="Vertigo" Width="120" Height="18" Margin="90,0,0,0" VerticalAlignment="Center" MouseLeftButtonUp="Vertigo_MouseLeftButtonUp" Cursor="Hand"/>
+                </StackPanel>
+                <Separator Margin="40,5,10,-3"/>
+
+                <Label Margin="35,0,0,0" x:Name="VersionLabel" Foreground="{DynamicResource InputFontColor}" Content="{x:Static properties:Resources.Version}"/>
+                <Label Margin="35,0,0,0" Foreground="{DynamicResource InputFontColor}" Content="{x:Static properties:Resources.Copyright}"/>
+                <Separator Margin="40,5,10,-3"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                <Label Margin="35,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.Homepage}" MouseLeftButtonUp="Homepage_MouseLeftButtonUp" Cursor="Hand"/>
+                <Label Margin="10,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.Discussion}" MouseLeftButtonUp="Discussion_MouseLeftButtonUp" Cursor="Hand"/>
+                <Label Margin="10,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.People}" MouseLeftButtonUp="People_MouseLeftButtonUp" Cursor="Hand"/>
+                </StackPanel>
+                <Separator Margin="40,5,10,-3"/>
+                <Label Margin="35,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="Microsoft Permissive License (Ms-PL)"/>
+                <ScrollViewer Margin="40,5,5,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Width="280" Height="70">
+                    <TextBlock Foreground="{DynamicResource InputFontColor}" TextWrapping="Wrap" Text="{x:Static properties:Resources.EULA}"/>
+                </ScrollViewer>
+            </StackPanel>
+        </Border>
+
+        <!-- Footer -->
+        <Border Background="{DynamicResource BackgroundBrush}" Height="15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,5,5"/>
+        
+    </StackPanel>
+</UserControl>

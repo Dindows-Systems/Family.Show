@@ -1,0 +1,524 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6028571C-B855-42AE-8903-77F1D2B5A000}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>Microsoft.FamilyShow</RootNamespace>
+    <AssemblyName>FamilyShow</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>winexe</OutputType>
+    <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignManifests>false</SignManifests>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationIcon>FamilyShow.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>FamilyShow.snk</AssemblyOriginatorKeyFile>
+    <ApplicationExtension>.application</ApplicationExtension>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <StartupObject>Microsoft.FamilyShow.SingleInstanceManager</StartupObject>
+    <ManifestCertificateThumbprint>9A4B76436B8C6C854E44E82E603D228E8ECB7AD4</ManifestCertificateThumbprint>
+    <ManifestKeyFile>FamilyShow_TemporaryKey.pfx</ManifestKeyFile>
+    <DelaySign>false</DelaySign>
+    <PublishUrl>V:\Family.Show\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Family.Show</ProductName>
+    <PublisherName>Family.Show</PublisherName>
+    <MinimumRequiredVersion>4.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>familyshow.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>4.2.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Maintainability#CA1502;-Microsoft.Performance#CA1823;-Microsoft.Performance#CA1800</CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System.Printing" />
+    <Reference Include="WindowsFormsIntegration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\WindowsFormsIntegration\3.0.0.0__31bf3856ad364e35\WindowsFormsIntegration.dll</HintPath>
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\WPFToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Design, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\WPFToolkit.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.VisualStudio.Design, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\WPFToolkit.VisualStudio.Design.dll</HintPath>
+    </Reference>
+    <Compile Include="Controls\Welcome.xaml.cs">
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\Welcome.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindableExtender.cs" />
+    <Compile Include="Controls\AttachmentViewer.xaml.cs">
+      <DependentUpon>AttachmentViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TaskBar.cs" />
+    <Compile Include="Controls\Places.xaml.cs">
+      <DependentUpon>Places.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Extract.xaml.cs">
+      <DependentUpon>Extract.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateCalculator.xaml.cs">
+      <DependentUpon>DateCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GedcomLocalization.xaml.cs">
+      <DependentUpon>GedcomLocalization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Language.xaml.cs">
+      <DependentUpon>Language.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StoryViewer.xaml.cs">
+      <DependentUpon>StoryViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Diagram\DiagramGroup.cs" />
+    <Compile Include="Controls\Diagram\DiagramLogic.cs" />
+    <Compile Include="Controls\Diagram\DiagramNode.cs" />
+    <Compile Include="Controls\Diagram\DiagramViewer.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DiagramViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Merge.xaml.cs">
+      <DependentUpon>Merge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Statistics.xaml.cs">
+      <DependentUpon>Statistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Repositories.xaml.cs">
+      <DependentUpon>Repositories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Sources.xaml.cs">
+      <DependentUpon>Sources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Html.xaml.cs">
+      <DependentUpon>Html.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Save.xaml.cs">
+      <DependentUpon>Save.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FamilyData\FamilyData.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FamilyData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FamilyData\FamilyEditListView.cs" />
+    <Compile Include="Controls\FamilyData\FamilyDisplayListView.cs" />
+    <Compile Include="Controls\FamilyData\FilterSortListView.cs" />
+    <Compile Include="Controls\FamilyData\FilterText.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FilterText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FamilyData\Histogram.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Histogram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewUserControl.xaml.cs">
+      <DependentUpon>NewUserControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\PersonInfo.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PersonInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FamilyData\SharedBirthdays.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SharedBirthdays.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FamilyData\SortListView.cs" />
+    <Compile Include="Controls\FamilyData\TagCloud.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TagCloud.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PhotoViewer.xaml.cs">
+      <DependentUpon>PhotoViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.en-GB.Designer.cs">
+      <DependentUpon>Resources.en-GB.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.de-DE.Designer.cs">
+      <DependentUpon>Resources.de-DE.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.fr-FR.Designer.cs">
+      <DependentUpon>Resources.fr-FR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.it-IT.Designer.cs">
+      <DependentUpon>Resources.it-IT.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.es-ES.Designer.cs">
+      <DependentUpon>Resources.es-ES.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="SingleInstanceManager.cs" />
+    <Compile Include="ValueConverters.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.en-GB.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en-GB.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de-DE.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de-DE.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr-FR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.it-IT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es-ES.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es-ES.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="FamilyShow.cd" />
+    <None Include="FamilyShow.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sample Files\Kennedy.ged" />
+    <None Include="Sample Files\Windsor.familyx" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonDialog.cs" />
+    <Compile Include="Controls\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Diagram\Diagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Diagram\DiagramConnector.cs" />
+    <Compile Include="Controls\Diagram\DiagramRow.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\AttachmentViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Places.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Extract.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DateCalculator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\GedcomLocalization.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Language.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\StoryViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Diagram\DiagramViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Merge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Statistics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Repositories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Sources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Html.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Save.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FamilyData\FamilyData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FamilyData\FilterText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FamilyData\Histogram.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\NewUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PersonInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FamilyData\SharedBirthdays.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\FamilyData\TagCloud.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PhotoViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Details.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="Images\Search.png" />
+    <Resource Include="Images\Photo.png" />
+    <Resource Include="Images\Paperclip.png" />
+    <Resource Include="Images\Source.png" />
+    <Resource Include="Images\Repository.png" />
+    <Resource Include="Images\Note.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\Folder.png" />
+    <Resource Include="Images\Primary.png" />
+    <Resource Include="Images\Print.png" />
+    <Resource Include="Images\Save.png" />
+    <Resource Include="FamilyShow.ico" />
+    <Resource Include="Images\Citation.png" />
+    <Resource Include="Images\Help.png" />
+    <Resource Include="Images\SecurityLock.png" />
+    <Resource Include="Images\Statistics.png" />
+    <Resource Include="EULA.txt" />
+    <Resource Include="Images\Calculator.png" />
+    <Resource Include="Images\RightArrowBlue.png" />
+    <Resource Include="Images\Merge.png">
+    </Resource>
+    <Resource Include="Images\RightArrowRed.png" />
+    <Resource Include="Images\Globe.png" />
+    <Resource Include="Images\ZippedFile.png" />
+    <Resource Include="Images\AddFile.png" />
+    <Resource Include="Images\AddImage.png" />
+    <Resource Include="Images\DeleteImage.png" />
+    <Content Include="Languages.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Themes\Silver\SilverResources.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Themes\Black\BlackResources.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CharacterGrowFont.png" />
+    <Resource Include="Images\CharacterShrinkFont.png" />
+    <Resource Include="Images\EditCopy.png" />
+    <Resource Include="Images\EditCut.png" />
+    <Resource Include="Images\EditPaste.png" />
+    <Resource Include="Images\EditRedo.png" />
+    <Resource Include="Images\EditUndo.png" />
+    <Resource Include="Images\ListBullets.png" />
+    <Resource Include="Images\ListNumbering.png" />
+    <Resource Include="Images\ParagraphCenterJustify.png" />
+    <Resource Include="Images\ParagraphDecreaseIndentation.png" />
+    <Resource Include="Images\ParagraphFullJustify.png" />
+    <Resource Include="Images\ParagraphIncreaseIndentation.png" />
+    <Resource Include="Images\ParagraphLeftJustify.png" />
+    <Resource Include="Images\ParagraphRightJustify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyShowLib\FamilyShowLib.csproj">
+      <Project>{2D6E56AB-7C1D-4129-858C-E319BF04E7C8}</Project>
+      <Name>FamilyShowLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

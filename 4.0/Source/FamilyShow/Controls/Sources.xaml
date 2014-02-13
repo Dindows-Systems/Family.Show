@@ -1,0 +1,65 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2006" 
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+  mc:Ignorable="d" x:Class="Microsoft.FamilyShow.Sources" Width="410">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <!-- Data Template for displaying the sources -->
+            <DataTemplate x:Key="SourceTemplate">
+                <TextBlock Text="{Binding Path=SourceNameAndId, Mode=Default}"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <StackPanel Width="410">
+
+        <!-- Header -->
+        <Border Padding="5,0,5,0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0" Height="30" Width="410" >
+            <Grid>
+                <TextBlock Padding="20,0,0,0" Text="{x:Static properties:Resources.Sources}" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" FontSize="18" FontWeight="Bold" d:LayoutOverrides="Height" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <Image HorizontalAlignment="Left" Source="..\Images\Source.png"  Height="20" />
+                <Button Content="X" x:Name="CancelButton" Click="CancelButton_Click"  Height="15"  HorizontalAlignment="Right" Width="15" Style="{DynamicResource RedButtonStyle}"/>
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1" Width="410" >
+
+            <StackPanel Background="{DynamicResource InputBackgroundBrush}">
+
+                <Label Content="{x:Static properties:Resources.SourceList}" Foreground="{DynamicResource InputFontColor}" Margin="0,0,12.223,0" />
+                <ListBox MinHeight="100" Height="100" ItemTemplate="{DynamicResource SourceTemplate}" ScrollViewer.VerticalScrollBarVisibility="Auto" x:Name="SourcesCombobox"  SelectionChanged="SourcesCombobox_SelectionChanged"  Margin="5,0,5,0" />
+
+                <Label Content="{x:Static properties:Resources.Name}" Foreground="{DynamicResource InputFontColor}" />
+                <TextBox TextWrapping="NoWrap" x:Name="SourceNameEditTextBox"  Margin="5,0,5,0" Height="21.96" />
+
+                <Label Content="{x:Static properties:Resources.Author}" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left" Width="250" />
+                <TextBox TextWrapping="NoWrap" x:Name="SourceAuthorEditTextBox"  Margin="5,0,5,0" Height="21.96" />
+
+                <Label Content="{x:Static properties:Resources.Publisher}" Foreground="{DynamicResource InputFontColor}" />
+                <TextBox AcceptsReturn="True" TextWrapping="Wrap"  x:Name="SourcePublisherEditTextBox" ScrollViewer.VerticalScrollBarVisibility="Auto"  Margin="5,0,5,0" Height="60" />
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="{x:Static properties:Resources.Repository}" Foreground="{DynamicResource InputFontColor}" />
+                    <Label x:Name="SourceRepository" Content="{x:Static properties:Resources.BracketRepositoryNameBracket}" Foreground="{DynamicResource InputFontColor}" />
+                </StackPanel>
+                <TextBox  TextWrapping="Wrap"  x:Name="SourceRepositoryEditTextBox"  Margin="5,0,5,0" Height="21.96" LostFocus="SourceRepositoryEditTextBox_LostFocus"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="{x:Static properties:Resources.Save}" x:Name="SaveButton" Click="SaveButton_Click" Margin="5,7,0,7"  Width="Auto" MinWidth="60" Height="15"  Style="{DynamicResource RedButtonStyle}"/>
+                    <Button Content="{x:Static properties:Resources.Add}" x:Name="DeleteButton" Click="AddButton_Click"  Margin="5,7,0,7" Width="Auto" MinWidth="60" Height="15"  Style="{DynamicResource RedButtonStyle}" />
+                    <Button Content="{x:Static properties:Resources.Delete}" x:Name="AddButton" Click="DeleteButton_Click"  Margin="5,7,0,7" Width="Auto" MinWidth="60" Height="15"  Style="{DynamicResource RedButtonStyle}"/>
+                    <Button Content="{x:Static properties:Resources.Export}" x:Name="ExportSourcesButton" Click="ExportSourcesButton_Click" Margin="5,7,0,7" Height="15" Width="Auto" MinWidth="60" Style="{DynamicResource RedButtonStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Footer -->
+        <Border Opacity="100" Background="{DynamicResource BackgroundBrush}" Height="15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,5,5"></Border>
+        
+    </StackPanel>
+</UserControl>

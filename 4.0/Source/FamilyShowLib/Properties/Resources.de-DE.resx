@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdditionalInfo" xml:space="preserve">
+    <value>Zusätzliche Infos</value>
+  </data>
+  <data name="AddNewPersonAs" xml:space="preserve">
+    <value>Zusetzen neue Person</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Adopted" xml:space="preserve">
+    <value>Angenommen</value>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>Alter</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="AncestralGenerations" xml:space="preserve">
+    <value>Ahnengenerationen:</value>
+  </data>
+  <data name="And" xml:space="preserve">
+    <value>und</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Geburtsdatum</value>
+  </data>
+  <data name="BirthPlace" xml:space="preserve">
+    <value>Geburtsort</value>
+  </data>
+  <data name="Births" xml:space="preserve">
+    <value>Geburten</value>
+  </data>
+  <data name="Brother" xml:space="preserve">
+    <value>Bruder</value>
+  </data>
+  <data name="BurialDate" xml:space="preserve">
+    <value>Vergraben Datum</value>
+  </data>
+  <data name="BurialPlace" xml:space="preserve">
+    <value>Grabstätte</value>
+  </data>
+  <data name="Child" xml:space="preserve">
+    <value>Kind</value>
+  </data>
+  <data name="CremationDate" xml:space="preserve">
+    <value>Feuerbestattung Datum</value>
+  </data>
+  <data name="CremationPlace" xml:space="preserve">
+    <value>Krematorien</value>
+  </data>
+  <data name="CurrentPerson" xml:space="preserve">
+    <value>Aktuelle Person:</value>
+  </data>
+  <data name="Daughter" xml:space="preserve">
+    <value>Tochter</value>
+  </data>
+  <data name="DeathDate" xml:space="preserve">
+    <value>Todesdatum</value>
+  </data>
+  <data name="DeathPlace" xml:space="preserve">
+    <value>der Tod</value>
+  </data>
+  <data name="Deaths" xml:space="preserve">
+    <value>Gestorben</value>
+  </data>
+  <data name="DescendantGenerations" xml:space="preserve">
+    <value>Nachkomme Generationen:</value>
+  </data>
+  <data name="DuplicatePeople" xml:space="preserve">
+    <value>Duplikat Personen:</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Bildung</value>
+  </data>
+  <data name="Father" xml:space="preserve">
+    <value>Vater</value>
+  </data>
+  <data name="FilteredOn" xml:space="preserve">
+    <value>Auf Filter:</value>
+  </data>
+  <data name="Foster" xml:space="preserve">
+    <value>Förderung</value>
+  </data>
+  <data name="GeneratedByFamilyShow" xml:space="preserve">
+    <value>Generated von Family.Show Version</value>
+  </data>
+  <data name="HideNotes" xml:space="preserve">
+    <value>Hide alle Noten</value>
+  </data>
+  <data name="HidingNotes" xml:space="preserve">
+    <value>Ausblenden von Noten benötigt JavaScript aktiviert sein.</value>
+  </data>
+  <data name="Husband" xml:space="preserve">
+    <value>Ehemann</value>
+  </data>
+  <data name="ImportedPeople" xml:space="preserve">
+    <value>Importierte Personen:</value>
+  </data>
+  <data name="ImportedRepositories" xml:space="preserve">
+    <value>Importierte Repositories:</value>
+  </data>
+  <data name="ImportedSources" xml:space="preserve">
+    <value>Importierte Quellen:</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>Dies scheint nicht als ein gültiges Datum (TT / MM / JJJJ).</value>
+  </data>
+  <data name="Living" xml:space="preserve">
+    <value>Lebendig</value>
+  </data>
+  <data name="Marriages" xml:space="preserve">
+    <value>Hochzeit</value>
+  </data>
+  <data name="MergedRepositories" xml:space="preserve">
+    <value>Fusionierte Repositories:</value>
+  </data>
+  <data name="MergedSources" xml:space="preserve">
+    <value>Quellen zusammengeführt:</value>
+  </data>
+  <data name="Mother" xml:space="preserve">
+    <value>Mutter</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Names" xml:space="preserve">
+    <value>Name(n)</value>
+  </data>
+  <data name="Natural" xml:space="preserve">
+    <value>Natürlichen</value>
+  </data>
+  <data name="NoPlaces" xml:space="preserve">
+    <value>Keine Plätze mehr exportieren.</value>
+  </data>
+  <data name="NoRepositories" xml:space="preserve">
+    <value>Nr. Repositories importiert werden sollen.</value>
+  </data>
+  <data name="NoSources" xml:space="preserve">
+    <value>Keine Quellen zu importieren.</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Hinweis</value>
+  </data>
+  <data name="NumberOfPeople" xml:space="preserve">
+    <value>Anzahl Personen:</value>
+  </data>
+  <data name="Occupation" xml:space="preserve">
+    <value>Beruf</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>auf</value>
+  </data>
+  <data name="Parent" xml:space="preserve">
+    <value>Eltern</value>
+  </data>
+  <data name="PeopleImported" xml:space="preserve">
+    <value>Personen eingeführt werden.</value>
+  </data>
+  <data name="PlacesExported" xml:space="preserve">
+    <value>Länder exportiert.</value>
+  </data>
+  <data name="PrivateRecord" xml:space="preserve">
+    <value>Private Rekord</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Verlag</value>
+  </data>
+  <data name="RelationshipToCurrentPerson" xml:space="preserve">
+    <value>Beziehung zu aktuellen Person</value>
+  </data>
+  <data name="Religion" xml:space="preserve">
+    <value>Religion</value>
+  </data>
+  <data name="RepositoriesImported" xml:space="preserve">
+    <value>Repositories importiert werden.</value>
+  </data>
+  <data name="Repository" xml:space="preserve">
+    <value>Archiv</value>
+  </data>
+  <data name="ShowNotes" xml:space="preserve">
+    <value>Alle Notizen</value>
+  </data>
+  <data name="Sibling" xml:space="preserve">
+    <value>Sibling</value>
+  </data>
+  <data name="Sister" xml:space="preserve">
+    <value>Schwester</value>
+  </data>
+  <data name="Son" xml:space="preserve">
+    <value>Sohn</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Quelle</value>
+  </data>
+  <data name="SourcesImported" xml:space="preserve">
+    <value>Quellen importiert werden.</value>
+  </data>
+  <data name="Spouse" xml:space="preserve">
+    <value>Ehepartner</value>
+  </data>
+  <data name="SummaryOfPeople" xml:space="preserve">
+    <value>Zusammenfassung von Menschen</value>
+  </data>
+  <data name="SummaryOfRepositories" xml:space="preserve">
+    <value>Zusammenfassung der reporitories</value>
+  </data>
+  <data name="SummaryOfRepositoriesForFile" xml:space="preserve">
+    <value>Zusammenfassung von Endlagern für Datei</value>
+  </data>
+  <data name="SummaryOfSources" xml:space="preserve">
+    <value>Zusammenfassung der Quellen</value>
+  </data>
+  <data name="SummaryOfSourcesForFile" xml:space="preserve">
+    <value>Zusammenfassung der Quellen für die Datei</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unbekannt</value>
+  </data>
+  <data name="Wife" xml:space="preserve">
+    <value>Ehefrau</value>
+  </data>
+  <data name="Of" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>zu</value>
+  </data>
+  <data name="CompatabilityMessage" xml:space="preserve">
+    <value>Diese Datei wurde mit einer früheren Version von Family.Show erstellt. Family.Show Version 4 hat viele neue Funktionen, die Sie zusätzliche Informationen über Ihre Familie aufnehmen können. Bitte beachten Sie, dass Sie Daten verlieren, wenn Sie eine Datei in einer neueren Version von Family.Show mit einer früheren Version des Programms erstellt wurden.</value>
+  </data>
+  <data name="Compatability" xml:space="preserve">
+    <value>Kompatibilität</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>Veranstaltungen</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>Leute</value>
+  </data>
+  <data name="DiedOn" xml:space="preserve">
+    <value>starb am</value>
+  </data>
+  <data name="In" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="WasBornOn" xml:space="preserve">
+    <value>wurde geboren am</value>
+  </data>
+  <data name="FamilyTree" xml:space="preserve">
+    <value>Baum meiner Familie</value>
+  </data>
+  <data name="At" xml:space="preserve">
+    <value>bei</value>
+  </data>
+  <data name="Burials" xml:space="preserve">
+    <value>Bestattungen</value>
+  </data>
+  <data name="Cremations" xml:space="preserve">
+    <value>Feuerbestattungen</value>
+  </data>
+  <data name="WasBuriedOn" xml:space="preserve">
+    <value>wurde beerdigt am</value>
+  </data>
+  <data name="WasCrematedOn" xml:space="preserve">
+    <value>wurde eingeäschert auf</value>
+  </data>
+</root>

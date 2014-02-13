@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Comment CommentText="RELATIONSHIPS">
+    <Position X="11" Y="1" Height="0.291" Width="8.29" />
+  </Comment>
+  <Comment CommentText="Person and People">
+    <Position X="4" Y="1" Height="0.291" Width="6.135" />
+  </Comment>
+  <Comment CommentText="GEDCOM">
+    <Position X="10.972" Y="5.756" Height="0.291" Width="8.29" />
+  </Comment>
+  <Comment CommentText="MISC">
+    <Position X="11" Y="9" Height="0.291" Width="8.29" />
+  </Comment>
+  <Class Name="Microsoft.FamilyShowLib.App" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>App.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.ChildRelationship" Collapsed="true">
+    <Position X="15.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.ContentChangedEventArgs" Collapsed="true">
+    <Position X="13.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>People.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.Family" Collapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomExport.cs</FileName>
+      <HashCode>CAAAAAAACAAAAAQACAAEAAAACAAAAAEAAAABAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.FamilyMap" Collapsed="true">
+    <Position X="13.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomExport.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.GedcomConverter" Collapsed="true">
+    <Position X="15.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomConverter.cs</FileName>
+      <HashCode>AgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.GedcomExport" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomExport.cs</FileName>
+      <HashCode>QAAAgAAAAAAAAAAIBCBABAAAAAAAAgCAAQBAgCAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.GedcomIdMap" Collapsed="true">
+    <Position X="13.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomExport.cs</FileName>
+      <HashCode>AAAAEAAAAAAAAABAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.GedcomImport" Collapsed="true">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomImport.cs</FileName>
+      <HashCode>QgAAgIgAIAAAAgQgIgAIAciAAEAYAAEAAAAUAAICAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.GedcomLine" Collapsed="true">
+    <Position X="17.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>GedcomConverter.cs</FileName>
+      <HashCode>AAAggCAAAAAgAAAAAgAAAAAAAAEAABABAAAQAABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.ParentRelationship" Collapsed="true">
+    <Position X="11" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.ParentSet" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Person.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAQIAgAACAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.People" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>People.cs</FileName>
+      <HashCode>IAAAgIACAAAAAABAIAAAAAAAAAAAAAAIBADAAAAAgEA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Microsoft.FamilyShowLib.People.Const" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>People.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.PeopleCollection">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>People.cs</FileName>
+      <HashCode>AAAAAAEAAQAAEAAAIACgwAAAgCAIAAAAAAABAAAQAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.Person" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Person.cs</FileName>
+      <HashCode>AKQGQEABIAFAIqCApFYUgBRQkUCAQCEAAyBAigeoFgg=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Microsoft.FamilyShowLib.Person.Const" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Person.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.Photo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Photo.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEIAAIAEAAggFAEAAAABAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.Relationship" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAEAAAAFBAAAAAAEAAAAAAAABAAAAAAEAAQAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.RelationshipHelper" Collapsed="true">
+    <Position X="11" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RelationshipHelper.cs</FileName>
+      <HashCode>AAAAAAAAAACAEgAAAAAAgABAAAAAQAAAAgAACAkwAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.SiblingRelationship" Collapsed="true">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.SpouseRelationship" Collapsed="true">
+    <Position X="17.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAEAAAABAAAAIAAAAAAAAAAAAAQAAAAEAAAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.Story" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Story.cs</FileName>
+      <HashCode>EAAAgIAAAAAAAAAAIAAAAEAAgAFAAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.ParentSetCollection" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Person.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.PhotoCollection" Collapsed="true">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Photo.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.FamilyShowLib.RelationshipCollection" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Microsoft.FamilyShowLib.Gender" Collapsed="true">
+    <Position X="8.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Person.cs</FileName>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.FamilyShowLib.ParentChildModifier" Collapsed="true">
+    <Position X="13.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>BAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.FamilyShowLib.RelationshipType" Collapsed="true">
+    <Position X="17.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AABAAAIAAAAAAIAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Microsoft.FamilyShowLib.SpouseModifier" Collapsed="true">
+    <Position X="15.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Relationship.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

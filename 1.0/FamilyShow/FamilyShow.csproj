@@ -1,0 +1,169 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6028571C-B855-42AE-8903-77F1D2B5A000}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RootNamespace>Microsoft.FamilyShow</RootNamespace>
+    <AssemblyName>FamilyShow</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <OutputType>winexe</OutputType>
+    <MinFrameworkVersionRequired>3.0</MinFrameworkVersionRequired>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignManifests>false</SignManifests>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationIcon>FamilyShow.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>FamilyShow.snk</AssemblyOriginatorKeyFile>
+    <MapFileExtensions>false</MapFileExtensions>
+    <InstallUrl>http://www.vertigo.com/downloads/familyshow/</InstallUrl>
+    <SupportUrl>http://www.vertigo.com/familyshow</SupportUrl>
+    <ProductName>Family.Show</ProductName>
+    <PublisherName>Microsoft Family.Show</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationVersion>1.0.1.0</ApplicationVersion>
+    <ApplicationExtension>.application</ApplicationExtension>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Maintainability#CA1502;-Microsoft.Performance#CA1823;-Microsoft.Performance#CA1800</CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.IdentityModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\DiagramGroup.cs" />
+    <Compile Include="Controls\DiagramLogic.cs" />
+    <Compile Include="Controls\DiagramNode.cs" />
+    <Compile Include="Controls\DiagramViewer.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DiagramViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewUserControl.xaml.cs">
+      <DependentUpon>NewUserControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\PersonInfo.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>PersonInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ValueConverters.cs" />
+    <Compile Include="Controls\Welcome.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram.cd" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="FamilyShow.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Kennedy.ged" />
+    <None Include="Resources\Windsor.family" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommonDialog.cs" />
+    <Compile Include="Controls\Details.xaml.cs">
+      <DependentUpon>Details.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Diagram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\DiagramConnector.cs" />
+    <Compile Include="Controls\DiagramRow.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\DiagramViewer.xaml" />
+    <Page Include="Controls\NewUserControl.xaml" />
+    <Page Include="Controls\PersonInfo.xaml" />
+    <Page Include="Controls\Welcome.xaml" />
+    <Page Include="MainWindow.xaml" />
+    <Page Include="Resources\AppStyles.xaml" />
+    <Page Include="Controls\Details.xaml" />
+    <Page Include="Resources\DiagramNodeStyles.xaml" />
+    <Page Include="Resources\SimpleStyles.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyShowLib\FamilyShowLib.csproj">
+      <Project>{2D6E56AB-7C1D-4129-858C-E319BF04E7C8}</Project>
+      <Name>FamilyShowLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FamilyShow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Release Notes.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.WinFX.targets" />
+</Project>

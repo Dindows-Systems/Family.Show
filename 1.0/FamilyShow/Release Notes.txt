@@ -1,0 +1,32 @@
+
+Version 1.0.1.0 (2007-05-11)
+--
+Fix problem when exporting to GEDCOM and a middle name was specified and 
+a married name was not specified.
+
+Fix problem importing GEDCOM files that contain invalid characters.
+
+Fix problem importing GEDCOM files that contain family sections with
+invalid individuals.
+
+Fix problem importing GEDCOM files that contain invalid tag names.
+
+Fixed a bug with adding duplicate relationship objects when adding a spouse.
+
+Fixed a bug with RemoveSiblingRelationships method.
+
+Fixed Export Gedcom menu command showing .family instead of .gedcom extension.
+
+Decided to increment the build number instead of the revision number on future versions.
+
+
+Version 1.0.0.1 (2007-04-28)
+--
+Prompt the user to save modified family trees when create a new file, open 
+an existing file, import a GEDCOM file, and when the application terminates.
+
+
+Version 1.0.0.0 (2007-04-27)
+--
+Initial release.
+

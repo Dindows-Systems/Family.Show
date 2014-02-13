@@ -1,0 +1,214 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Microsoft.FamilyShow"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2006" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    x:Class="Microsoft.FamilyShow.StoryViewer"
+    xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+    IsVisibleChanged="UserControl_IsVisibleChanged">
+    <UserControl.Resources>
+
+        <!-- Converter for displaying the the first name with an apostrophe. -->
+        <local:FirstNamePossessiveFormConverter x:Key="FirstNamePossessiveFormConverter"/>
+
+        <local:ImageConverter x:Key="ImageConverter"/>
+
+        <!-- Converter for showing/hiding features based on boolean property -->
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+
+        <!-- Converter for showing/hiding features based on boolean property -->
+        <local:NotBoolToVisibilityConverter x:Key="NotBoolToVisibilityConverter"/>
+
+        <!-- Converter for disabling -->
+        <local:NotConverter x:Key="NotConverter"/>
+
+        <Style x:Key="formatTextStyle" TargetType="{x:Type ButtonBase}">
+            <Setter Property="FontFamily" Value="Palatino Linotype"/>
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="FontSize" Value ="14"/>
+        </Style>
+
+        <Style x:Key="formatImageStyle" TargetType="{x:Type ButtonBase}">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="CommandTarget" Value="{Binding ElementName=StoryRichTextBox}"/>
+        </Style>
+
+        <DataTemplate x:Key="NotesColumnTemplate">
+            <Border HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" x:Name="NotesPhotoBorder">
+                <Image x:Name="Note"  MinWidth="12" MaxWidth="12" Width="12"  Height="12" Visibility="{Binding Path=HasNote, Converter={StaticResource BoolToVisibilityConverter} , Mode=Default}"  Source="..\Images\Note.png" Stretch="UniformToFill" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+            </Border>
+        </DataTemplate>
+
+        <Style x:Key="NoteColumnHeader" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border x:Name="Bd" Style="{DynamicResource ColumnHeaderStyle}">
+                            <DockPanel>
+                                <Image Source="..\Images\Note.png" Height="12" Margin="0,0,3,0"/>
+                            </DockPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <DataTemplate x:Key="NamesColumnTemplate">
+            <TextBlock Text="{Binding Path=FullName}" Foreground="{DynamicResource FontColor}"/>
+        </DataTemplate>
+
+
+    </UserControl.Resources>
+
+
+
+    <Border Margin="10,0,10,10" Style="{DynamicResource BorderStyle}" Background="{DynamicResource BackgroundBrush}" Width="Auto" Height="Auto">
+
+        <DockPanel>
+
+            <!-- Header Panel-->
+            <DockPanel Margin="0,0,10,0" DockPanel.Dock="Top" Height="30">
+
+                <Image Margin="10,0,0,0" VerticalAlignment="Center" Source="..\Images\Note.png" Width="16" Height="16" />
+                <TextBlock Text="{x:Static properties:Resources.Stories}" Style="{DynamicResource HeaderStyle}" FontWeight="Bold" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource HeaderFontColor}"/>
+                <Button Width="Auto" MinWidth="40" Content="{x:Static properties:Resources.Back}" Click="CloseButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right" Height="15" x:Name="CloseButton" IsCancel="True" IsDefault="True" FontSize="10"/>
+            </DockPanel>
+
+            <Border CornerRadius="0,0,10,10" BorderBrush="{DynamicResource BorderBrush}" Background="{DynamicResource PersonInfoBackgroundBrush}" BorderThickness="0,1,0,0" >
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+
+                    </Grid.RowDefinitions>
+
+                    <!-- Story View -->
+                    <Border x:Name="StoryViewBorder" Grid.Column="1" Grid.RowSpan="2" Margin="0,10,10,10" Style="{DynamicResource DetailsBorderStyle}" Background="{x:Null}" BorderThickness="1,1,1,1">
+                        <Grid Focusable="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Margin="10,10,0,0">
+                                <TextBlock x:Name="Name1"  TextTrimming="CharacterEllipsis" MaxWidth="235" MaxHeight="30" LineStackingStrategy="MaxHeight" Text="{x:Static properties:Resources.Name}" TextWrapping="Wrap" Style="{DynamicResource HeaderStyle}" FontSize="18" FontWeight="Bold" Margin="5,0,0,0"/>
+                                <Button Width="Auto" MinWidth="65" x:Name="EditStoryButton"  Content="{x:Static properties:Resources.Edit}" Click="EditStoryButton_Click" HorizontalAlignment="Right" Margin="0,2,10,0" DockPanel.Dock="Right" VerticalAlignment="Top" Height="15" FontSize="10"  />
+				                <Button Width="Auto" MinWidth="65" x:Name="PrintStoryButton" Content="{x:Static properties:Resources.PrintMenu}" Click="PrintStoryButton_Click" HorizontalAlignment="Right" Margin="0,2,10,0" DockPanel.Dock="Right" VerticalAlignment="Top" Height="15" FontSize="10" Style="{DynamicResource RedButtonStyle}"/>
+                             </DockPanel>
+
+                            <FlowDocumentReader Foreground="{DynamicResource FontColor}" HorizontalAlignment="Stretch" x:Name="StoryView" VerticalAlignment="Stretch" Grid.Row="1" Margin="0,0,10,0" MinZoom="50" Zoom="100" IsFindEnabled="False" IsTwoPageViewEnabled="False" MaxZoom="150" Background="#00FFFFFF" ForceCursor="False" Opacity="1">
+                                <FlowDocument IsOptimalParagraphEnabled="true" IsHyphenationEnabled="true" Foreground="{DynamicResource FlowDocumentFontColor}"/>
+                            </FlowDocumentReader>
+
+                        </Grid>
+                    </Border>
+
+                    <!-- Story Edit -->
+                    <Border x:Name="StoryEditBorder" Grid.Column="1" Grid.RowSpan="2" Margin="0,10,10,10" Style="{DynamicResource DetailsBorderStyle}" Background="{x:Null}" BorderThickness="1,1,1,1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Margin="10,10,0,0">
+                                <TextBlock x:Name="Name2"  TextTrimming="CharacterEllipsis" MaxWidth="500" MaxHeight="30"  LineStackingStrategy="MaxHeight" Text="{x:Static properties:Resources.Name}" TextWrapping="Wrap" Style="{DynamicResource HeaderStyle}" FontSize="18" FontWeight="Bold" Margin="5,0,0,0"/>
+                
+                <Button Width="Auto" MinWidth="65" HorizontalAlignment="Right" Margin="0,2,10,0" x:Name="CancelStoryButton" Content="{x:Static properties:Resources.Cancel}" DockPanel.Dock="Right" IsCancel="True" Click="CancelStoryButton_Click" FontSize="10" Height="15" VerticalAlignment="Top"/>
+                <Button Width="Auto" MinWidth="65" x:Name="SaveStoryButton" Content="{x:Static properties:Resources.Save}" HorizontalAlignment="Right" Margin="0,2,10,0" DockPanel.Dock="Right" IsDefault="True" Click="SaveStoryButton_Click" FontSize="10" Height="15" VerticalAlignment="Top" Style="{DynamicResource RedButtonStyle}" />
+				
+				
+              </DockPanel>
+                            <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1" Margin="10,0,10,10">
+
+                                <!-- This tool bar contains all the editing buttons. -->
+                                <ToolBar Height="30" DockPanel.Dock="Top" Visibility="Visible">
+
+                                    <ToggleButton Name="BoldButton" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleBold" ToolTip="Bold">
+                                        <TextBlock FontWeight="Bold">B</TextBlock>
+                                    </ToggleButton>
+                                    <ToggleButton Name="ItalicButton" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleItalic" ToolTip="Italic">
+                                        <TextBlock FontStyle="Italic" FontWeight="Bold">I</TextBlock>
+                                    </ToggleButton>
+                                    <ToggleButton Name="UnderlineButton" Style="{StaticResource formatTextStyle}" Command="EditingCommands.ToggleUnderline" ToolTip="Underline">
+                                        <TextBlock TextDecorations="Underline" FontWeight="Bold">U</TextBlock>
+                                    </ToggleButton>
+
+                                    <ComboBox Name="FontsComboBox" Width="150" SelectionChanged="FontsComboBox_SelectionChanged" />
+
+                                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseFontSize" ToolTip="Grow Font">
+                                        <Image Source="..\Images\CharacterGrowFont.png"/>
+                                    </Button>
+                                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseFontSize" ToolTip="Shrink Font">
+                                        <Image Source="..\Images\CharacterShrinkFont.png"/>
+                                    </Button>
+
+                                    <Separator/>
+                                    <ToggleButton Name="BulletsButton" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleBullets" ToolTip="{x:Static properties:Resources.Bullets}">
+                                        <Image Source="..\Images\ListBullets.png"/>
+                                    </ToggleButton>
+                                    <ToggleButton Name="NumberingButton" Style="{StaticResource formatImageStyle}" Command="EditingCommands.ToggleNumbering" ToolTip="{x:Static properties:Resources.Numbering}">
+                                        <Image Source="..\Images\ListNumbering.png"/>
+                                    </ToggleButton>
+                                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseIndentation" ToolTip="{x:Static properties:Resources.DecreaseIndentation}">
+                                        <Image Source="..\Images\ParagraphDecreaseIndentation.png"/>
+                                    </Button>
+                                    <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.IncreaseIndentation" ToolTip="{x:Static properties:Resources.IncreaseIndentation}">
+                                        <Image Source="..\Images\ParagraphIncreaseIndentation.png"/>
+                                    </Button>
+                                    <Separator/>
+
+                                    <ToggleButton Name="AlignLeftButton" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignLeft" ToolTip="{x:Static properties:Resources.AlignLeft}">
+                                        <Image Source="..\Images\ParagraphLeftJustify.png"/>
+                                    </ToggleButton>
+                                    <ToggleButton Name="AlignCenterButton" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignCenter" ToolTip="{x:Static properties:Resources.AlignCenter}">
+                                        <Image Source="..\Images\ParagraphCenterJustify.png"/>
+                                    </ToggleButton>
+                                    <ToggleButton Name="AlignRightButton" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignRight" ToolTip="{x:Static properties:Resources.AlignRight}">
+                                        <Image Source="..\Images\ParagraphRightJustify.png"/>
+                                    </ToggleButton>
+                                    <ToggleButton Name="AlignFullButton" Style="{StaticResource formatImageStyle}" Command="EditingCommands.AlignJustify" ToolTip="{x:Static properties:Resources.AlignJustify}">
+                                        <Image Source="..\Images\ParagraphFullJustify.png"/>
+                                    </ToggleButton>
+
+                                </ToolBar>
+                                <Border BorderBrush="{DynamicResource BorderBrush}" Background="{DynamicResource LightBrush}" BorderThickness="1,1,1,1">
+                                    <RichTextBox x:Name="StoryRichTextBox" Grid.RowSpan="1" AcceptsTab="True" SpellCheck.IsEnabled="true" xml:lang="en-US" 
+                    SelectionChanged="StoryRichTextBox_SelectionChanged" TextChanged="StoryRichTextBox_TextChanged" Focusable="True" Visibility="Visible" />
+                                </Border>
+                            </DockPanel>
+                        </Grid>
+                    </Border>
+
+                    <!-- Storys List Box-->
+                    <Border MaxWidth="250" MinWidth="250" Grid.Column="0" Margin="10,10,10,10" Style="{DynamicResource DetailsBorderStyle}" Background="{x:Null}" BorderThickness="1,1,1,1">
+                        <DockPanel >
+                            <DockPanel HorizontalAlignment="Stretch" DockPanel.Dock="Top">
+                                <Label Margin="0,0,5,5" Content="{x:Static properties:Resources.Filter}" VerticalAlignment="Center"/>
+                                <local:FilterText x:Name="StoryFilterTextBox" TextBoxBase.TextChanged="FilterTextBox_TextChanged" VerticalAlignment="Center" Margin="0,0,0,0"/>
+                            </DockPanel>
+                            <local:FamilyDisplayListView x:Name="StorysListBox" Foreground="{DynamicResource FontColor}" Background="{x:Null}" Margin="0,5,0,0" BorderBrush="{x:Null}"
+          		SelectionMode="Single" SelectionChanged="StorysListBox_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+          		Style="{DynamicResource FamilyListViewStyle}" ScrollViewer.VerticalScrollBarVisibility="Auto"
+          		VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling">
+                                <local:FamilyDisplayListView.ItemContainerStyle>
+                                    <Style TargetType="{x:Type ListViewItem}" >
+                                        <Setter Property="Template" Value="{DynamicResource FamilyListViewItemTemplate}"/>
+                                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                                    </Style>
+                                </local:FamilyDisplayListView.ItemContainerStyle>
+                                <local:FamilyDisplayListView.View>
+                                    <GridView AllowsColumnReorder="False">
+                                        <local:SortListViewColumn HeaderContainerStyle="{DynamicResource NoteColumnHeader}" SortProperty="HasNote" CellTemplate="{StaticResource NotesColumnTemplate}" Header="" Width="25" />
+                                        <local:SortListViewColumn SortProperty="Name" Header="{x:Static properties:Resources.Name}" CellTemplate="{StaticResource NamesColumnTemplate}" Width="200" />
+                                    </GridView>
+                                </local:FamilyDisplayListView.View>
+                            </local:FamilyDisplayListView>
+                        </DockPanel>
+                    </Border>
+                </Grid>
+            </Border>
+
+        </DockPanel>
+    </Border>
+</UserControl>

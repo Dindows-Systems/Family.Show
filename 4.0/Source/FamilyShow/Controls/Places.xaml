@@ -1,0 +1,56 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2006" 
+  xmlns:local="clr-namespace:Microsoft.FamilyShow"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+  mc:Ignorable="d" x:Class="Microsoft.FamilyShow.Places" Width="Auto" MinWidth="200">
+    <StackPanel>
+
+        <!-- Header -->
+        <Border Padding="5,0,5,0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0" Height="30">
+            <TextBlock Padding="5,0,0,0" Text="{x:Static properties:Resources.ExportPlaces}" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" FontSize="18" FontWeight="Bold" d:LayoutOverrides="Height" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Border>
+
+        <!-- Content -->
+        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1">
+            <Grid Margin="0,0,0,0" Height="Auto" Background="{DynamicResource InputBackgroundBrush}" >
+                <StackPanel>
+                    <Label Margin="5,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.ChooseWhatToExportColon}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <RadioButton IsChecked="True" GroupName="Html" Content="{x:Static properties:Resources.Places}" Margin="10,5,0,0" x:Name="Option1" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <RadioButton GroupName="Html" Content="{x:Static properties:Resources.PlacesWithTimes}" Margin="10,0,0,0" x:Name="Option2" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <RadioButton GroupName="Html" Content="{x:Static properties:Resources.Lifetimes}" Margin="10,0,0,0" x:Name="Option3" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Checked="Option3_CheckedChanged" Unchecked="Option3_CheckedChanged"/>
+                    <StackPanel>
+                            <Label Margin="5,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.Options}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <CheckBox Margin="10,5,0,0" Content="{x:Static properties:Resources.HideLivingPeople}" x:Name="PrivacyPlaces" Foreground="{DynamicResource InputFontColor}" ToolTip="{x:Static properties:Resources.PrivacyTooltip}" />
+                            <CheckBox Margin="10,5,0,0" IsChecked="True" Content="{x:Static properties:Resources.Births}" x:Name="BirthsCheckBox" Foreground="{DynamicResource InputFontColor}" />
+                            <CheckBox Margin="10,5,0,0" IsChecked="True" Content="{x:Static properties:Resources.Deaths}" x:Name="DeathsCheckBox" Foreground="{DynamicResource InputFontColor}"  />
+                            <CheckBox Margin="10,5,0,0" IsChecked="True" Content="{x:Static properties:Resources.Cremations}" x:Name="CremationsCheckBox" Foreground="{DynamicResource InputFontColor}"  />
+                            <CheckBox Margin="10,5,0,0" IsChecked="True" Content="{x:Static properties:Resources.Burials}" x:Name="BurialsCheckBox" Foreground="{DynamicResource InputFontColor}"  />
+                            <CheckBox Margin="10,5,0,0" IsChecked="True" Content="{x:Static properties:Resources.Marriages}" x:Name="MarriagesCheckBox" Foreground="{DynamicResource InputFontColor}"  />
+
+
+
+
+
+                    </StackPanel>
+                    
+ 
+                        <StackPanel x:Name="OptionsPanel" Orientation="Horizontal" Margin="10,10,0,10">
+                            <Button Style="{DynamicResource RedButtonStyle}" Content="{x:Static properties:Resources.Export}" x:Name="ExportButton" Click="ExportButton_Click" HorizontalAlignment="Left" Width="Auto" MinWidth="60" Height="15"  />
+                            <Button Content="{x:Static properties:Resources.Cancel}" x:Name="CancelButton" Click="CancelButton_Click" Margin="5,0,0,0" Height="15" VerticalAlignment="Bottom"  Width="Auto" MinWidth="60" />
+                        </StackPanel>
+                    
+
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <!-- Footer -->
+        <Grid>
+            <Border Background="{DynamicResource BackgroundBrush}" Height="15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,5,5"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

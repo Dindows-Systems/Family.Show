@@ -1,0 +1,14 @@
+<!-- 
+Shared Resources and Styles
+Resources & Styles defined in this ResourceDictionary will impact the entire application.  
+This ResourceDictionary is merged in App.Xaml.
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+  <!-- This is the thickness setting for most borders -->
+  <Thickness x:Key="BorderThickness">1,1,1,1</Thickness>
+
+  <!-- Padding value for labels -->
+  <Thickness x:Key="LabelPadding">5,8,5,2</Thickness>
+</ResourceDictionary>

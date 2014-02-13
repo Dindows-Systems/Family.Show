@@ -1,0 +1,265 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2006" 
+  xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  mc:Ignorable="d"
+  x:Class="Microsoft.FamilyShow.Merge"  
+  >
+
+    <StackPanel MinWidth="760" Width="Auto">
+
+        <!-- Header -->
+
+        <Border Padding="5,0,5,0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0" Height="30">
+            <Grid>
+                <Image HorizontalAlignment="Left" Source="..\Images\Merge.png" Height="20" />
+                <TextBlock Margin="25,0,0,0" Text="{x:Static properties:Resources.Merge}" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" FontSize="18" FontWeight="Bold" d:LayoutOverrides="Height" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+            </Grid>
+        </Border>
+
+        <!-- Summary -->
+        <Border x:Name="Summary" Background="{DynamicResource PanelGradientBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1" >
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label  Grid.Row="0" Grid.Column="0" Content="{x:Static properties:Resources.Summary}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label x:Name="SummaryText" Grid.Row="1" Grid.Column="0" Content="SummaryText" Foreground="{DynamicResource FontColor}" />
+
+                <Label  Grid.Row="2" Grid.Column="0" Content="{x:Static properties:Resources.Options}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <CheckBox x:Name="SummaryStar" Grid.Row="3" Margin="5,5,0,0" Grid.Column="0" Foreground="{DynamicResource FontColor}" VerticalAlignment="Center" IsChecked="True" />
+                <Label Grid.Row="3" Margin="20,0,0,0" Grid.Column="0" Content="{x:Static properties:Resources.AppendStar}" Foreground="{DynamicResource FontColor}" />
+
+                <Label Grid.Row="4" Grid.Column="0" Foreground="{DynamicResource FontColor}" Content="{x:Static properties:Resources.ClickFinish}" FontWeight="Bold"/>
+
+                <Button Content="{x:Static properties:Resources.Finish}" Grid.Row="20" Grid.ColumnSpan="2" x:Name="DoneButton" Click="DoneButton_Click" HorizontalAlignment="Left" Margin="5,7,0,7"  Width="60" Height="15" VerticalAlignment="Bottom" Style="{DynamicResource RedButtonStyle}"/>
+
+            </Grid>
+        </Border>
+
+        <!-- Duplicate Summary -->
+        <Border x:Name="MergeDuplicateSummary" Background="{DynamicResource PanelGradientBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1" >
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label  Grid.Row="0" Grid.Column="0" Content="{x:Static properties:Resources.MergeDuplicates}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="{x:Static properties:Resources.MergeDuplicatesMessage1}" Foreground="{DynamicResource FontColor}" />
+                <Label  Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Content="{x:Static properties:Resources.MergeDuplicatesMessage2}" Foreground="{DynamicResource FontColor}" />
+
+                <Label  Grid.Row="3" Grid.Column="0" Foreground="{DynamicResource FontColor}" Content="{x:Static properties:Resources.ClickContinue}" FontWeight="Bold"/>
+                <Button Content="{x:Static properties:Resources.Continue}" Grid.Row="4" Grid.ColumnSpan="2" x:Name="ContinueButton" Click="ContinueButton_Click" HorizontalAlignment="Left" Margin="5,7,0,7"  Width="60" Height="15" VerticalAlignment="Bottom"/>
+
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <Border x:Name="MergeDuplicates" Background="{DynamicResource PanelGradientBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1" >
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="5*" MaxWidth="264"/>
+                    <ColumnDefinition Width="5*" MaxWidth="264"/>
+                    <ColumnDefinition Width="1.2*"/>
+                    <ColumnDefinition Width="1.2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0"  Grid.Column="0" Content="{x:Static properties:Resources.Field}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="0"  Grid.Column="1" Content="{x:Static properties:Resources.ExistingInformation}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="0"  Grid.Column="2" Content="{x:Static properties:Resources.NewConflicting}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="0"  Grid.Column="4" HorizontalAlignment="Center" Content="{x:Static properties:Resources.UpdateQuestion}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="0"  Grid.Column="3" HorizontalAlignment="Center" Content="{x:Static properties:Resources.Citations}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+
+                <!--Separators-->
+
+                <Separator Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Top" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+                <Separator Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="5" VerticalAlignment="Bottom" Margin="1,0,1,0" Style="{DynamicResource DetailsSeparatorStyle}" />
+
+                <!--Field Labels-->
+
+                <Label Grid.Row="1"  Grid.Column="0" Content="{x:Static properties:Resources.Names}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="2"  Grid.Column="0" Content="{x:Static properties:Resources.Surname}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="3"  Grid.Column="0" Content="{x:Static properties:Resources.Suffix}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="4"  Grid.Column="0" Content="{x:Static properties:Resources.DateOfBirth}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="5"  Grid.Column="0" Content="{x:Static properties:Resources.BirthPlace}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="6"  Grid.Column="0" Content="{x:Static properties:Resources.DateOfDeath}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="7"  Grid.Column="0" Content="{x:Static properties:Resources.DeathPlace}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="8"  Grid.Column="0" Content="{x:Static properties:Resources.Occupation}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="9"  Grid.Column="0" Content="{x:Static properties:Resources.Education}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="10" Grid.Column="0" Content="{x:Static properties:Resources.Religion}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="11" Grid.Column="0" Content="{x:Static properties:Resources.CremationDate}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="12" Grid.Column="0" Content="{x:Static properties:Resources.CremationPlace}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="13" Grid.Column="0" Content="{x:Static properties:Resources.BurialDate}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="14" Grid.Column="0" Content="{x:Static properties:Resources.BurialPlace}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+                <Label Grid.Row="15" VerticalAlignment="Top" Grid.Column="0" Content="{x:Static properties:Resources.Note}" Foreground="{DynamicResource FontColor}" FontWeight="Bold"/>
+
+                <!--Data Comparison-->
+
+                <Label x:Name="OldName" Grid.Row="1"  Grid.Column="1"  Margin="0,1,0,1" />
+                <Label x:Name="NewName" Grid.Row="1"  Grid.Column="2" Margin="0,1,0,1"/>
+
+                <Label x:Name="OldLastName" Grid.Row="2" Grid.Column="1"  Margin="0,0,0,1"/>
+                <Label x:Name="NewLastName" Grid.Row="2" Grid.Column="2" Margin="0,0,0,1"/>
+
+                <Label x:Name="OldSuffix" Grid.Row="3" Grid.Column="1"  Margin="0,0,0,1"/>
+                <Label x:Name="NewSuffix" Grid.Row="3" Grid.Column="2" Margin="0,0,0,1"/>
+
+                <Label x:Name="OldBirthDate" Grid.Row="4" Grid.Column="1" />
+                <Label x:Name="NewBirthDate" Grid.Row="4" Grid.Column="2" />
+
+                <Label x:Name="OldBirthPlace" Grid.Row="5" Grid.Column="1" Margin="0,0,0,1"/>
+                <Label x:Name="NewBirthPlace" Grid.Row="5" Grid.Column="2" Margin="0,0,0,1"/>
+
+                <Label x:Name="OldDeathDate" Grid.Row="6"   Grid.Column="1" />
+                <Label x:Name="NewDeathDate" Grid.Row="6"   Grid.Column="2" />
+
+                <Label x:Name="OldDeathPlace" Grid.Row="7"  Grid.Column="1" Margin="0,0,0,1"  />
+                <Label x:Name="NewDeathPlace" Grid.Row="7"  Grid.Column="2" Margin="0,0,0,1" />
+
+                <Label x:Name="OldOccupation" Grid.Row="8"  Grid.Column="1" Margin="0,0,0,1"  />
+                <Label x:Name="NewOccupation" Grid.Row="8"  Grid.Column="2" Margin="0,0,0,1" />
+
+                <Label x:Name="OldEducation" Grid.Row="9"  Grid.Column="1"  Margin="0,0,0,1" />
+                <Label x:Name="NewEducation" Grid.Row="9"  Grid.Column="2" Margin="0,0,0,1" />
+
+                <Label x:Name="OldReligion" Grid.Row="10" Grid.Column="1" Margin="0,0,0,1"  />
+                <Label x:Name="NewReligion" Grid.Row="10" Grid.Column="2" Margin="0,0,0,1" />
+
+                <Label x:Name="OldCremationDate" Grid.Row="11"  Grid.Column="1" />
+                <Label x:Name="NewCremationDate" Grid.Row="11"  Grid.Column="2" />
+
+                <Label x:Name="OldCremationPlace" Grid.Row="12" Grid.Column="1" Margin="0,0,0,1"  />
+                <Label x:Name="NewCremationPlace" Grid.Row="12" Grid.Column="2" Margin="0,0,0,1"  />
+
+                <Label x:Name="OldBurialDate" Grid.Row="13"  Grid.Column="1"  />
+                <Label x:Name="NewBurialDate" Grid.Row="13"  Grid.Column="2"  />
+
+                <Label x:Name="OldBurialPlace" Grid.Row="14" Grid.Column="1" Margin="0,0,0,1"  />
+                <Label x:Name="NewBurialPlace" Grid.Row="14" Grid.Column="2" Margin="0,0,0,1" />
+
+                <ScrollViewer x:Name="OldNoteScroll" Margin="0,10,0,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Height="60" Grid.Row="15" Grid.Column="1">
+                    <TextBlock Foreground="{DynamicResource FontColor}" TextWrapping="Wrap" x:Name="OldNote"/>
+                </ScrollViewer>
+
+                <ScrollViewer x:Name="NewNoteScroll" Margin="0,10,0,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Height="60" Grid.Row="15" Grid.Column="2">
+                    <TextBlock Foreground="{DynamicResource FontColor}" TextWrapping="Wrap" x:Name="NewNote"/>
+                </ScrollViewer>
+
+                <Border x:Name="BirthImageB" Grid.Row="4" Grid.RowSpan="2" Grid.Column="3" Margin="0,0,0,1">
+                    <Image x:Name="BirthImage"  VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+                <Border x:Name="DeathImageB" Grid.Row="6" Grid.RowSpan="2" Grid.Column="3" Margin="0,0,0,1" >
+                    <Image x:Name="DeathImage"   VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+
+                <Border x:Name="OccupationImageB" Grid.Row="8"  Grid.Column="3" Margin="0,0,0,1" >
+                    <Image x:Name="OccupationImage"   VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+
+                <Border x:Name="EducationImageB" Grid.Row="9"  Grid.Column="3" Margin="0,0,0,1" >
+                    <Image x:Name="EducationImage"   VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+
+                <Border x:Name="ReligionImageB" Grid.Row="10"  Grid.Column="3" Margin="0,0,0,1" >
+                    <Image x:Name="ReligionImage"   VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+
+                <Border x:Name="CremationImageB" Grid.Row="11" Grid.RowSpan="2" Grid.Column="3" Margin="0,0,0,1">
+                    <Image x:Name="CremationImage"   VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+
+                <Border x:Name="BurialImageB" Grid.Row="13" Grid.RowSpan="2" Grid.Column="3" Margin="0,0,0,1">
+                    <Image x:Name="BurialImage"   VerticalAlignment="Center" HorizontalAlignment="Center" Source="..\Images\Citation.png" Height="20" />
+                </Border>
+
+                <!--CheckBoxes-->
+
+                <CheckBox x:Name="NameCheck" Grid.Row="1" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="LastNameCheck" Grid.Row="2" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="SuffixCheck" Grid.Row="3" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="BirthDateCheck" Grid.Row="4" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="BirthPlaceCheck" Grid.Row="5" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="DeathDateCheck" Grid.Row="6" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="DeathPlaceCheck" Grid.Row="7" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="OccupationCheck" Grid.Row="8" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="EducationCheck" Grid.Row="9" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="ReligionCheck" Grid.Row="10" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="CremationDateCheck" Grid.Row="11" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="CremationPlaceCheck" Grid.Row="12" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="BurialDateCheck" Grid.Row="13" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox x:Name="BurialPlaceCheck" Grid.Row="14" Grid.Column="4"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <CheckBox VerticalAlignment="Top" Margin="0,10,0,0"  x:Name="NoteCheck" Grid.Row="15" Grid.Column="4" HorizontalAlignment="Center"/>
+
+                <Button Content="{x:Static properties:Resources.Update}" Grid.Row="20" Grid.Column="3" Grid.ColumnSpan="2" x:Name="UpdateButton" Click="UpdateButton_Click" HorizontalAlignment="Left" Margin="60,7,0,7"  Width="60" Height="15" VerticalAlignment="Bottom"  Style="{DynamicResource RedButtonStyle}"/>
+                <Button Content="{x:Static properties:Resources.Skip}" Grid.Row="20" Grid.Column="3" Grid.ColumnSpan="2" x:Name="SkipButton" Click="SkipButton_Click" HorizontalAlignment="Left" Margin="-10,7,0,7" Width="60" Height="15" VerticalAlignment="Bottom" />
+
+                <ProgressBar x:Name="FileProgressBar" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="2" Height="15" Width="350" Minimum="0" Maximum="100" Margin="10,0,0,0" />
+                <TextBlock x:Name="FileProgressText" VerticalAlignment="Center" Grid.Row="20" Grid.Column="2" Text="x/x" Margin="0,0,0,0" Foreground="{DynamicResource FontColor}"/>
+
+            </Grid>
+
+        </Border>
+
+        <!-- Footer -->
+        <Grid>
+            <Border Opacity="100" Background="{DynamicResource BackgroundBrush}" Height="15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,5,5"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

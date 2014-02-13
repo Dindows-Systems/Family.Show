@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpGenProject>
+  <Project level = "1" Name = "FamilyShow" SUID = "{39D76140-302D-40B9-92B9-EDFDEA42B477}" HUID = "{3618BE07-C2CE-4C4F-A1D9-2D318AB12184}"  caption = "FamilyShow"  TemplateHtmlFile = "Welcome.htm"  GeneratedHtmlFile = "Welcome.htm"  PicsSubfolderName = "images\"  Charset = "UTF-8"  CSSFullpath = "Office11.css" 
+          key="Project" 
+          icon="hlpclose" 
+          title="Family.Show"  >
+    <Introduction level = "2"  caption = "Introduction"  TemplateHtmlFile = "Welcome.htm"  GeneratedHtmlFile = "Welcome.htm" 
+            key="Introduction" 
+            pkey="Project" 
+            nnodekey="GetStart" 
+            icon="helptopic" 
+            title="Introduction"  />
+    <GetStart level = "2"  caption = "Getting Started"  TemplateHtmlFile = "GettingStarted.htm"  GeneratedHtmlFile = "GettingStarted.htm" 
+            key="GetStart" 
+            pkey="Project" 
+            pnodekey="Introduction" 
+            nnodekey="Tutorial" 
+            icon="hlpclose" 
+            title="Getting Started"  >
+      <Install level = "3"  caption = "Installation"  TemplateHtmlFile = "Installation.htm"  GeneratedHtmlFile = "Installation.htm" 
+              key="Install" 
+              pkey="GetStart" 
+              nnodekey="StartProgram" 
+              icon="helptopic" 
+              title="Installation"  />
+      <StartProgram level = "3"  caption = "Starting the program"  TemplateHtmlFile = "StartingTheProgram.htm"  GeneratedHtmlFile = "StartingTheProgram.htm" 
+              key="StartProgram" 
+              pkey="GetStart" 
+              pnodekey="Install" 
+              icon="helptopic" 
+              title="Starting the program"  />
+    </GetStart>
+    <Tutorial level = "2"  caption = "Tutorial"  TemplateHtmlFile = "Tutorial.htm"  GeneratedHtmlFile = "Tutorial.htm" 
+            key="Tutorial" 
+            pkey="Project" 
+            pnodekey="GetStart" 
+            nnodekey="Dialogs" 
+            icon="helptopic" 
+            title="Tutorial"  />
+    <Dialogs level = "2"  caption = "Dialogs"  TemplateHtmlFile = "Dialogs.htm"  GeneratedHtmlFile = "Dialogs.htm" 
+            key="Dialogs" 
+            pkey="Project" 
+            pnodekey="Tutorial" 
+            nnodekey="Registration" 
+            icon="hlpclose" 
+            title="All Dialogs" 
+            ProcessCode="1"  >
+      <FORM level = "3"  name = "Welcome"  type = "2"  caption = "Welcome"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Welcome.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Welcome" 
+              pkey="Dialogs" 
+              nnodekey="FamilyShow.Form_AttachmentViewer" 
+              icon="helptopic" 
+              title="Welcome" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "AttachmentViewer"  type = "2"  caption = "AttachmentViewer"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_AttachmentViewer.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_AttachmentViewer" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Welcome" 
+              nnodekey="FamilyShow.Form_DateCalculator" 
+              icon="helptopic" 
+              title="AttachmentViewer" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "DateCalculator"  type = "2"  caption = "DateCalculator"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_DateCalculator.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_DateCalculator" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_AttachmentViewer" 
+              nnodekey="FamilyShow.Form_GedcomLocalization" 
+              icon="helptopic" 
+              title="DateCalculator" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "GedcomLocalization"  type = "2"  caption = "GedcomLocalization"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_GedcomLocalization.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_GedcomLocalization" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_DateCalculator" 
+              nnodekey="FamilyShow.Form_Language" 
+              icon="helptopic" 
+              title="GedcomLocalization" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Language"  type = "2"  caption = "Language"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Language.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Language" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_GedcomLocalization" 
+              nnodekey="FamilyShow.Form_StoryViewer" 
+              icon="helptopic" 
+              title="Language" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "StoryViewer"  type = "2"  caption = "StoryViewer"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_StoryViewer.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_StoryViewer" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Language" 
+              nnodekey="FamilyShow.Form_DiagramViewer" 
+              icon="helptopic" 
+              title="StoryViewer" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "DiagramViewer"  type = "2"  caption = "DiagramViewer"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_DiagramViewer.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_DiagramViewer" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_StoryViewer" 
+              nnodekey="FamilyShow.Form_About" 
+              icon="helptopic" 
+              title="DiagramViewer" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "About"  type = "2"  caption = "About"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_About.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_About" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_DiagramViewer" 
+              nnodekey="FamilyShow.Form_Merge" 
+              icon="helptopic" 
+              title="About" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Merge"  type = "2"  caption = "Merge"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Merge.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Merge" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_About" 
+              nnodekey="FamilyShow.Form_Statistics" 
+              icon="helptopic" 
+              title="Merge" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Statistics"  type = "2"  caption = "Statistics"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Statistics.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Statistics" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Merge" 
+              nnodekey="FamilyShow.Form_Repositories" 
+              icon="helptopic" 
+              title="Statistics" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Repositories"  type = "2"  caption = "Repositories"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Repositories.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Repositories" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Statistics" 
+              nnodekey="FamilyShow.Form_Sources" 
+              icon="helptopic" 
+              title="Repositories" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Sources"  type = "2"  caption = "Sources"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Sources.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Sources" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Repositories" 
+              nnodekey="FamilyShow.Form_HTML" 
+              icon="helptopic" 
+              title="Sources" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "HTML"  type = "2"  caption = "HTML"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_HTML.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_HTML" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Sources" 
+              nnodekey="FamilyShow.Form_Save" 
+              icon="helptopic" 
+              title="HTML" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Save"  type = "2"  caption = "Save"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Save.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Save" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_HTML" 
+              nnodekey="FamilyShow.Form_FamilyData" 
+              icon="helptopic" 
+              title="Save" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "FamilyData"  type = "2"  caption = "FamilyData"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_FamilyData.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_FamilyData" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Save" 
+              nnodekey="FamilyShow.Form_FilterText" 
+              icon="helptopic" 
+              title="FamilyData" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "FilterText"  type = "2"  caption = "FilterText"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_FilterText.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_FilterText" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_FamilyData" 
+              nnodekey="FamilyShow.Form_Histogram" 
+              icon="helptopic" 
+              title="FilterText" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Histogram"  type = "2"  caption = "Histogram"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Histogram.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Histogram" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_FilterText" 
+              nnodekey="FamilyShow.Form_NewUserControl" 
+              icon="helptopic" 
+              title="Histogram" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "NewUserControl"  type = "2"  caption = "NewUserControl"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_NewUserControl.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_NewUserControl" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_Histogram" 
+              nnodekey="FamilyShow.Form_PersonInfo" 
+              icon="helptopic" 
+              title="NewUserControl" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "PersonInfo"  type = "2"  caption = "PersonInfo"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_PersonInfo.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_PersonInfo" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_NewUserControl" 
+              nnodekey="FamilyShow.Form_SharedBirthdays" 
+              icon="hlpclose" 
+              title="PersonInfo" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "SharedBirthdays"  type = "2"  caption = "SharedBirthdays"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_SharedBirthdays.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_SharedBirthdays" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_PersonInfo" 
+              nnodekey="FamilyShow.Form_TagCloud" 
+              icon="hlpclose" 
+              title="SharedBirthdays" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "TagCloud"  type = "2"  caption = "TagCloud"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_TagCloud.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_TagCloud" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_SharedBirthdays" 
+              nnodekey="FamilyShow.Form_PhotoViewer" 
+              icon="hlpclose" 
+              title="TagCloud" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "PhotoViewer"  type = "2"  caption = "PhotoViewer"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_PhotoViewer.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_PhotoViewer" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_TagCloud" 
+              nnodekey="FamilyShow.Form_MainWindow" 
+              icon="helptopic" 
+              title="PhotoViewer" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "MainWindow"  type = "2"  caption = "MainWindow"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_MainWindow.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_MainWindow" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_PhotoViewer" 
+              nnodekey="FamilyShow.Form_Details" 
+              icon="hlpclose" 
+              title="MainWindow" 
+              ProcessCode="999"  />
+      <FORM level = "3"  name = "Details"  type = "2"  caption = "Details"  TemplateHtmlFile = "Form.htm"  GeneratedHtmlFile = "FamilyShow_Form_Details.htm"  SourceProjectType = "C#"  SourceProjectName = "FamilyShow" 
+              key="FamilyShow.Form_Details" 
+              pkey="Dialogs" 
+              pnodekey="FamilyShow.Form_MainWindow" 
+              icon="helptopic" 
+              title="Details" 
+              ProcessCode="999"  />
+    </Dialogs>
+    <Registration level = "2"  caption = "Registration"  TemplateHtmlFile = "Registration.htm"  GeneratedHtmlFile = "Registration.htm" 
+            key="Registration" 
+            pkey="Project" 
+            pnodekey="Dialogs" 
+            nnodekey="Support" 
+            icon="helptopic" 
+            title="Registration"  />
+    <Support level = "2"  caption = "Support"  TemplateHtmlFile = "Support.htm"  GeneratedHtmlFile = "Support.htm" 
+            key="Support" 
+            pkey="Project" 
+            pnodekey="Registration" 
+            nnodekey="Copyright" 
+            icon="helptopic" 
+            title="Support"  />
+    <Copyright level = "2"  caption = "Copyright"  TemplateHtmlFile = "Copyright.htm"  GeneratedHtmlFile = "Copyright.htm" 
+            key="Copyright" 
+            pkey="Project" 
+            pnodekey="Support" 
+            icon="helptopic" 
+            title="Copyright"  />
+  </Project>
+<Settings>
+<Options>
+    <Option Name = "Version" Value = "5.012" />
+    <Option Name = "Application" Value = "FamilyShow" />
+    <Option Name = "Organization" Value = "Microsoft" />
+    <Option Name = "Author" Value = "Andrew" />
+    <Option Name = "Copyright" Value = "&#169; 2009" />
+    <Option Name = "Website" Value = "http:&#47;&#47;familyshow.codeplex.com&#47;" />
+    <Option Name = "EMail" Value = "" />
+    <Option Name = "Registration" Value = "" />
+    <Option Name = "IdentifyBy" Value = "Caption" />
+    <Option Name = "SnapshotFormat" Value = "Jpeg" />
+    <Option Name = "BulletedControlsAndMenus" Value = "true" />
+    <Option Name = "AddHotSpots" Value = "true" />
+    <Option Name = "AssociateHelpIndex" Value = "true" />
+    <Option Name = "NoReportsScreenshots" Value = "true" />
+    <Option Name = "FolderForGeneratedHelp" Value = "{Project Location}CHM" />
+    <Option Name = "CompileHTMLHelp" Value = "true" />
+    <Option Name = "OpenHTMLHelp" Value = "false" />
+    <Option Name = "SaveApplicationChanges" Value = "true" />
+    <Option Name = "Charset" Value = "UTF&#45;8" />
+    <Option Name = "AddControlsListForMenuList" Value = "true" />
+    <Option Name = "AddControlsSectionForMenuList" Value = "true" />
+    <Option Name = "AddImageForForm" Value = "true" />
+    <Option Name = "AddHotSpotsForForm" Value = "true" />
+    <Option Name = "AddControlsListForForm" Value = "true" />
+    <Option Name = "AddControlsSectionForForm" Value = "true" />
+    <Option Name = "AddImageForReport" Value = "false" />
+    <Option Name = "AddControlsListForReport" Value = "true" />
+    <Option Name = "AddControlsSectionForReport" Value = "true" />
+    <Option Name = "SubFolderForScreenshots" Value = "images&#92;" />
+    <Option Name = "FillIndexFromAppObjectsAndControls" Value = "true" />
+    <Option Name = "Language" Value = "English" />
+    <Option Name = "AddSearchTabToHelp" Value = "true" />
+    <Option Name = "CapturePreviewAreaOnly" Value = "false" />
+    <Option Name = "OpenHTMLEditor" Value = "true" />
+    <Option Name = "SkipInvisibleControls" Value = "true" />
+    <Option Name = "InsertExternalDescriptions" Value = "false" />
+    <Option Name = "ListOfTagsToParseContentsFrom" Value = "H2" />
+    <Option Name = "SyncTOCOnHTMLPageNavigationComplete" Value = "true" />
+    <Option Name = "GenerateHelpForForms" Value = "true" />
+    <Option Name = "GenerateHelpForReports" Value = "true" />
+    <Option Name = "HelpProjectName" Value = "FamilyShow" />
+    <Option Name = "HelpProjectTitle" Value = "Family.Show" />
+    <Option Name = "CSSFullPath" Value = "C:&#92;Program Files&#92;Help Generator&#92;Visual Studio 2008&#92;Templates&#92;Common&#92;Office11.css" />
+    <Option Name = "MakeNormalViewScreenshots" Value = "false" />
+    <Option Name = "LanguageCode" Value = "en" />
+    <Option Name = "GenerateHelpForTables" Value = "true" />
+    <Option Name = "MSWordTOCLowerHeadingLevel" Value = "2" />
+    <Option Name = "AutomatedTestModeOn" Value = "false" />
+    <Option Name = "GenerateHelpForQueries" Value = "true" />
+    <Option Name = "GenerateHelpForMacros" Value = "true" />
+    <Option Name = "UseProjectGroupAsSource" Value = "true" />
+    <Option Name = "UnattendedExecution" Value = "false" />
+</Options>
+</Settings>
+</HelpGenProject>

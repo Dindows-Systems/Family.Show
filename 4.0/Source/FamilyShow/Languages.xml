@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Languages>
+  <Language Name="English (United States)" Code="en-US"/>
+  <Language Name="English (United Kingdom)" Code="en-GB"/>
+  <Language Name="Español (Spanish) - Beta" Code="es-ES"/>
+  <Language Name="Français (French) - Beta" Code="fr-FR"/>
+  <Language Name="Deutsch (German) - Beta" Code="de-DE"/>
+  <Language Name="Italiano (Italian) - Beta" Code="it-IT"/>
+</Languages>

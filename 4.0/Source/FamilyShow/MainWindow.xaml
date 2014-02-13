@@ -1,0 +1,247 @@
+﻿<Window x:Class="Microsoft.FamilyShow.MainWindow"        
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Microsoft.FamilyShowLib="clr-namespace:Microsoft.FamilyShowLib;assembly=FamilyShowLib"
+      xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+      xmlns:local="clr-namespace:Microsoft.FamilyShow"
+      mc:Ignorable="d"
+
+      Title="Family.Show"
+      Width="960"
+      Height="728"  
+      Background="{DynamicResource MainBackgroundBrush}" 
+      ResizeMode="CanResizeWithGrip"
+      WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+
+        <!-- Animation for showing the Person Info control -->
+
+        <Storyboard x:Key="ShowPersonInfo" Completed="ShowPersonInfo_StoryboardCompleted">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PersonInfoControl" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PersonInfoControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for hiding the Person Info control -->
+        <Storyboard x:Key="HidePersonInfo" Completed="HidePersonInfo_StoryboardCompleted">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="PersonInfoControl">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="PersonInfoControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for showing the Family Data control -->
+        <Storyboard x:Key="ShowFamilyData" Completed="ShowFamilyData_StoryboardCompleted">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="FamilyDataControl" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="FamilyDataControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <!-- Animation for hiding the Family Data control -->
+        <Storyboard x:Key="HideFamilyData" Completed="HideFamilyData_StoryboardCompleted">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="FamilyDataControl">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:00.3000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="FamilyDataControl" Storyboard.TargetProperty="(UIElement.Visibility)">
+                <DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="{x:Static Visibility.Hidden}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <!--Links to image files-->
+        <Image x:Key="saveico" Source="Images\Save.png" Height="16" Width="16" />
+        <Image x:Key="printico" Source="Images\Print.png" Height="16" Width="16" />
+        <Image x:Key="folderico" Source="Images\Folder.png" Height="16" Width="16" />
+        <Image x:Key="helpico" Source="Images\Help.png" Height="16" Width="16" />
+        <Image x:Key="sourceico" Source="Images\Source.png" Height="16" Width="16" />
+        <Image x:Key="repositoryico" Source="Images\Repository.png" Height="16" Width="16" />
+        <Image x:Key="photosico" Source="Images\Photo.png" Height="16" Width="16" />
+        <Image x:Key="storiesico" Source="Images\Note.png" Height="16" Width="16" />
+        <Image x:Key="attachmentsico" Source="Images\Paperclip.png" Height="16" Width="16" />
+        <Image x:Key="statsico" Source="Images\Statistics.png" Height="16" Width="16" />
+        <Image x:Key="dateico" Source="Images\Calculator.png" Height="16" Width="16" />
+        <Image x:Key="mergeico" Source="Images\Merge.png" Height="16" Width="16" />
+        <Image x:Key="languageico" Source="Images\Globe.png" Height="16" Width="16" />
+        <Image x:Key="extractico" Source="Images\ZippedFile.png" Height="16" Width="16" />
+
+    </Window.Resources>
+
+    <!--Setup menu command bindings-->
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="NewFamily"/>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="OpenFamily"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveFamily"/>
+        <CommandBinding Command="ApplicationCommands.SaveAs" Executed="SaveFamilyAs"/>
+        <CommandBinding Command="ApplicationCommands.Print" Executed="Print"/>
+        <CommandBinding Command="ApplicationCommands.Help" Executed="Help"/>
+    </Window.CommandBindings>
+
+    <DockPanel>
+
+        <!-- Header Area-->
+        <Border Height="35" DockPanel.Dock="Top" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1" Padding="10,0,10,0" >
+            <DockPanel Height="34" >
+                <TextBlock xml:space="preserve" Opacity="1" FontFamily="Segoe UI" FontSize="20" FontStretch="Normal" FontWeight="Light" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" VerticalAlignment="Bottom" Margin="0,0,0,5"><Run Foreground="#FFCFD3DA" Text=" "/><Run Foreground="#FFCFD3DA" Text="Family"/><Run FontWeight="Normal" Text="."/><Run FontWeight="Normal" Text="Show"/></TextBlock>
+            </DockPanel>
+        </Border>
+
+        <!-- Menu Area -->    
+        <Border VerticalAlignment="Top" DockPanel.Dock="Top" Margin="0,5,0,5">
+            <Menu VerticalAlignment="Bottom" Margin="5,0,0,0" Style="{DynamicResource MenuStyle}"> 
+                
+                <MenuItem Header="{x:Static properties:Resources.NewMenu}" x:Name="NewMenu" Command="New" Style="{DynamicResource MenuItemStyle}"/>
+                <MenuItem Header="{x:Static properties:Resources.Open}" x:Name="OpenMenu"  Command="Open" Style="{DynamicResource MenuItemStyle}">
+                    <MenuItem Header="{x:Static properties:Resources.OpenMenu}" Command="Open" Icon="{StaticResource folderico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.GedcomMenu}" Click="ImportGedcom" />
+                    <MenuItem Header="{x:Static properties:Resources.MergeMenu}" Click="Merge" Icon="{StaticResource mergeico}"/>
+                </MenuItem>
+                
+                <MenuItem Header="{x:Static properties:Resources.Save}"  x:Name="SaveMenu" Style="{DynamicResource MenuItemStyle}" StaysOpenOnClick="True">
+                    <MenuItem Header="{x:Static properties:Resources.Save}" Command="Save" Icon="{StaticResource saveico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.SaveAsMenu}" Command="SaveAs"/>
+                    <MenuItem Header="{x:Static properties:Resources.ExportGedcomMenu}"  Click="ExportGedcom" />
+                    <MenuItem Header="{x:Static properties:Resources.ExportHtmlMenu}"  Click="ExportHtml"/>
+                    <MenuItem Header="{x:Static properties:Resources.ExportPlacesMenu}"  Click="ExportPlaces"/>
+                    <MenuItem Header="{x:Static properties:Resources.ExtractFilesMenu}" Icon="{StaticResource extractico}" Click="ExtractFiles"/>
+                </MenuItem>
+                
+                <MenuItem Header="{x:Static properties:Resources.Tools}" x:Name="MediaMenu" Style="{DynamicResource MenuItemStyle}">
+                    <MenuItem Header="{x:Static properties:Resources.SourcesMenu}" Click="EditSources" Icon="{StaticResource sourceico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.RepositoriesMenu}" Click="EditRepositories" Icon="{StaticResource repositoryico}" />
+                    <MenuItem Header="{x:Static properties:Resources.StatisticsMenu}" Click="Statistics" Icon="{StaticResource statsico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.DateCalculatorMenu}" Click="Dates" Icon="{StaticResource dateico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.PhotosMenu}" Click="Photos" Icon="{StaticResource photosico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.AttachmentsMenu}" Click="Attachments" Icon="{StaticResource attachmentsico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.StoriesMenu}" Click="Storys" Icon="{StaticResource storiesico}"/>
+                </MenuItem>
+
+                <MenuItem Header="{x:Static properties:Resources.Print}" x:Name="PrintMenu" Style="{DynamicResource MenuItemStyle}">
+                    <MenuItem Header="{x:Static properties:Resources.PrintMenu}" Command="Print" Icon="{StaticResource printico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.PrintXPSMenu}" Click="ExportXps"/>
+                </MenuItem>
+                
+                <MenuItem Header="{x:Static properties:Resources.ThemesHeader}" x:Name="ThemesMenu" Style="{DynamicResource MenuItemStyle}"/>
+                
+                <MenuItem Header="{x:Static properties:Resources.Help}" x:Name="HelpMenu" Style="{DynamicResource MenuItemStyle}">
+                    <MenuItem Header="{x:Static properties:Resources.ContentsMenu}" Command="Help" Icon="{StaticResource helpico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.LanguageMenu}" Click="Languages" Icon="{StaticResource languageico}"/>
+                    <MenuItem Header="{x:Static properties:Resources.AboutMenu}" Click="About"/>
+                </MenuItem>  
+                
+            </Menu>      
+        </Border>
+
+        <Grid Grid.IsSharedSizeScope="True" DockPanel.Dock="Top" >
+
+            <!-- Diagram Area -->
+            <Grid x:Name="DiagramPane" Margin="10,0,10,10">
+                <Grid.ContextMenu>
+                    <ContextMenu StaysOpen="False">
+                        <MenuItem Foreground="Black" x:Name="FullScreen"  Unchecked="FullScreen_Unchecked" Checked="FullScreen_Checked" Header="{x:Static properties:Resources.FullScreen}" IsCheckable="True" IsChecked="False" />
+                        <MenuItem Foreground="Black" x:Name="HideDiagramControls"  Unchecked="HideControls_Unchecked" Checked="HideControls_Checked" Header="{x:Static properties:Resources.HideControls}" IsCheckable="True" IsChecked="False"/>
+                    </ContextMenu>
+                </Grid.ContextMenu>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="567*" />
+                    <RowDefinition Height="15.04*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <!-- The column 1 clone is used when the details area is collapsed -->
+                    <ColumnDefinition x:Name="column1CloneForLayer0" SharedSizeGroup="column1"/>       
+                </Grid.ColumnDefinitions>
+                
+                <Border Background="{DynamicResource DiagramGradientBrush}" Style="{DynamicResource BorderStyle}" x:Name="DiagramBorder" Grid.RowSpan="2">          
+                    <local:DiagramViewer x:Name="DiagramControl" Zoom="1.5" />
+                </Border>
+            </Grid>
+
+            <!-- Details Area -->
+            <Grid x:Name="DetailsPane" Margin="0,0,7,10" Visibility="Visible">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition SharedSizeGroup="column1" Width="282"/>
+                </Grid.ColumnDefinitions>
+                <local:Details DataContext="{Binding}" Grid.Column="1" x:Name="DetailsControl" Margin="0,0,0,0" PersonInfoClick="DetailsControl_PersonInfoClick" EveryoneDeleted="DetailsControl_EveryoneDeleted" FamilyDataClick="DetailsControl_FamilyDataClick" />
+            </Grid>
+
+            <!-- New User Control -->
+            <local:NewUserControl x:Name="NewUserControl" HorizontalAlignment="Center" VerticalAlignment="Center" AddButtonClick="NewUserControl_AddButtonClick"/>
+            
+            <!-- Welcome User Control -->
+            <local:Welcome x:Name="WelcomeUserControl" HorizontalAlignment="Center" VerticalAlignment="Center" ImportButtonClick="WelcomeUserControl_ImportButtonClick" NewButtonClick="WelcomeUserControl_NewButtonClick" OpenButtonClick="WelcomeUserControl_OpenButtonClick" OpenRecentFileButtonClick="WelcomeUserControl_OpenRecentFileButtonClick" />
+            
+            <!-- About Control -->
+            <local:About x:Name="AboutControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" CloseButtonClick="AboutControl_CloseButtonClick" />
+            
+            <!-- Statistics Control -->
+            <local:Statistics x:Name="StatisticsControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" CloseButtonClick="StatisticsControl_CloseButtonClick" />
+            
+            <!-- PhotoViewer Control -->
+            <local:PhotoViewer x:Name="PhotoViewerControl" Visibility="Hidden" CloseButtonClick="PhotoViewerControl_CloseButtonClick" />
+            
+            <!-- AttachmentViewer Control -->
+            <local:AttachmentViewer x:Name="AttachmentViewerControl" Visibility="Hidden" CloseButtonClick="AttachmentViewerControl_CloseButtonClick" />
+            
+            <!-- StoryViewer Control -->
+            <local:StoryViewer x:Name="StoryViewerControl" Visibility="Hidden" CloseButtonClick="StoryViewerControl_CloseButtonClick" />
+
+            <!-- Merge Control -->
+            <local:Merge x:Name="MergeControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" DoneButtonClick="MergeControl_DoneButtonClick"/>
+
+            <!-- Save Control -->
+            <local:Save x:Name="SaveControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" SaveButtonClick="SaveControl_SaveButtonClick" CancelButtonClick="SaveControl_CancelButtonClick" />
+
+            <!-- Extract Control -->
+            <local:Extract x:Name="ExtractControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" CancelButtonClick="ExtractControl_CancelButtonClick" />
+
+            <!-- PersonInfo Control -->
+            <local:PersonInfo x:Name="PersonInfoControl" Opacity="0" Visibility="Hidden" CloseButtonClick="PersonInfoControl_CloseButtonClick" />
+            
+            <!-- Html Control -->
+            <local:Html x:Name="HtmlControl" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" CancelButtonClick="HtmlControl_CancelButtonClick"/>
+
+            <!-- Places Control -->
+            <local:Places x:Name="PlacesControl" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center" CancelButtonClick="PlacesControl_CancelButtonClick"/>
+
+            <!-- GedcomLocalization Control -->
+            <local:GedcomLocalization x:Name="GedcomLocalizationControl" Visibility="Hidden" VerticalAlignment="Center" ContinueButtonClick="GedcomLocalizationControl_ContinueButtonClick"/>
+            
+            <!-- Sources Control -->
+            <local:Sources x:Name="SourcesControl" Visibility="Hidden" VerticalAlignment="Center"  CancelButtonClick="SourcesControl_CancelButtonClick" />
+            
+            <!-- Repositories Control -->
+            <local:Repositories x:Name="RepositoriesControl" Visibility="Hidden" VerticalAlignment="Center"  CancelButtonClick="RepositoriesControl_CancelButtonClick" />
+            
+            <!-- FamilyData Control -->
+            <local:FamilyData x:Name="FamilyDataControl" Opacity="0" Visibility="Hidden" CloseButtonClick="FamilyDataControl_CloseButtonClick" />
+
+            <!-- Language Control -->
+            <local:Language x:Name="LanguageControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" CloseButtonClick="LanguageControl_CloseButtonClick" />
+            
+            <!--Date Calculator Control-->
+            <local:DateCalculator x:Name="DateCalculatorControl" HorizontalAlignment="Center" Visibility="Hidden" VerticalAlignment="Center" CancelButtonClick="DateCalculatorControl_CancelButtonClick" />
+
+        </Grid>
+
+    </DockPanel>
+
+</Window>

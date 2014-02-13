@@ -1,0 +1,27 @@
+<font face="Calibri">
+<h1>GEDCOM Files (*.ged)</h1>
+GEDCOM  is a widely used format in other family tree software.  Family.Show has support for the many common fields of GEDCOM version 5.5 including:
+<br/><br/>
+<li>People (INDI [Name, Surname, Suffix) including Restriction (RESN) tags.<br/>
+<li>Events (BIRT [Date, Place], DEAT [Date, Place], MARR [Date, Place], DIV [Date], OCCU [Description], EDUC [Description], RELI [Description])<br/>
+<li>Citations, sources, repositories and notes.
+<li>Photos when the GEDCOM file references a local file.<br/><br/>
+
+<b>Extended characters, other languages and GEDCOM files</b><br/><br/>
+Family.Show has full support for the UTF-8 encoding format.  Unfortunately most GEDCOM files are not encoded in this format so during import, Family.Show removes characters which it may not be able to display. If you use a language which has extended character sets, some information may be lost.  If the GEDCOM file has been exported from another genealogy program, there may be an option to export in UTF-8 format.  If UTF-8 is not available, the next best choice is ANSI which is a subset of UTF-8.  Alternatively, it is sometimes possible to convert files to UTF-8 encoding using programs such as Notepad.  To do this, open the *.ged in Notepad and click Save As from the File Menu.  At the bottom of the save dialogue, there is an option to select Encoding.  Choose UTF-8 to encode the file in UTF-8 format ensuring the file extension remains as *.ged (see Figure 1).  Once your file is correctly encoded, check 'Enable UTF-8 support' for full extended character support.<br/><br/>
+
+<img src="UTF8.jpg" width="500px"><br/>
+Fig 1.  Converting to UTF-8 using Nodepad<br/><br/>
+
+<b>Notes</b><br/><br/>
+<li>Restriction tags (RESN) are imported.  Supported <a href="FamilyShow_Restrictions.htm"><b>restrictions</b></a> are Locked and Privacy.<br/>
+<li>Family.Show has a dedicated field "IsLiving" for recording if a person is alive or not.  GEDCOM has no such equivalent field, instead relying on DEAT and BIRT tags to provide this information.  Often, DEAT tags are missing if nothing is known of the individuals death so during import, it is not possible to determine the IsLiving status.  In this case, the rule used is that a person with no DEAT tag is living unless their age is greater than 90.  In the few cases of people being older than this, users can simply update the record manually. <br/>
+<li>Often approximate dates are present in GEDCOM files.  On import, Family.Show will attempt to analyse dates which are not in a standard format.  Dates which are about (ABT), before (BEF) or after (AFT) are supported.  Sometimes quarterly information is in a GEDCOM DATE tag e.g. Jan-Feb-Mar 2009.  In this case, ABT 01/01/2009 will be recorded.  Given that there are so many possible ways of recording date information, inevitably, some information may be lost in transfer.
+<li>Family.Show does not fully support the GEDCOM standard.  If you import a GEDCOM file with additional fields this information will not be transferred.
+</font>
+<br/><br/>
+<font size=1 color=gray face="Calibri">
+Family.Show Help <br/>
+Copyright © 2009<br/>
+</font>
+

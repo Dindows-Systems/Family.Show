@@ -1,0 +1,44 @@
+[OPTIONS]
+Binary Index=No
+Compatibility=1.1 or later
+Compiled file=FamilyShow.chm
+Contents file=FamilyShow.hhc
+Default topic=Welcome.htm
+Display compile progress=Yes
+Full-text search=Yes
+Language=0x409 English (United States)
+Title=Family.Show
+
+
+[FILES]
+Copyright.htm
+Dialogs.htm
+FamilyShow_About.htm
+FamilyShow_Attachments.htm
+FamilyShow_DateCalculator.htm
+FamilyShow_Details.htm
+FamilyShow_DiagramViewer.htm
+FamilyShow_FamilyData.htm
+FamilyShow_FileFormats.htm
+FamilyShow_HTML.htm
+FamilyShow_Language.htm
+FamilyShow_Merge.htm
+FamilyShow_Person.htm
+FamilyShow_PersonInfo.htm
+FamilyShow_Places.htm
+FamilyShow_Privacy.htm
+FamilyShow_Save.htm
+FamilyShow_Sources.htm
+FamilyShow_Statistics.htm
+FileFormats_familyx.htm
+FileFormats_ged.htm
+GettingStarted.htm
+Installation.htm
+KnownIssues.htm
+StartingTheProgram.htm
+Support.htm
+Tutorial.htm
+Welcome.htm
+
+[INFOTYPES]
+

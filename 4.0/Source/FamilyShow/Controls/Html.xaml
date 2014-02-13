@@ -1,0 +1,88 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2006" 
+  xmlns:local="clr-namespace:Microsoft.FamilyShow"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+  mc:Ignorable="d" x:Class="Microsoft.FamilyShow.Html" Width="Auto">
+    <StackPanel>
+
+        <!-- Header -->
+        <Border Padding="5,0,5,0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0" Height="30">
+            <TextBlock Padding="5,0,0,0" Text="{x:Static properties:Resources.ExportHtml}" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" FontSize="18" FontWeight="Bold" d:LayoutOverrides="Height" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </Border>
+
+        <!-- Content -->
+        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1">
+            <Grid Margin="0,0,0,0" Height="Auto" Background="{DynamicResource InputBackgroundBrush}" >
+                <StackPanel>
+                    <Label Margin="5,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.ChooseWhatToExportColon}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <RadioButton GroupName="Html" IsChecked="True" Content="{x:Static properties:Resources.AllPeople}" Margin="10,5,0,0" x:Name="Option1" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    <RadioButton GroupName="Html" Content="{x:Static properties:Resources.CurrentPerson}" Margin="10,5.026,0,0" x:Name="Option2" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                    <RadioButton GroupName="Html" Content="{x:Static properties:Resources.ImmediateRelatives}" Margin="10,5,0,0" x:Name="Option3" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <RadioButton  GroupName="Html" Content="{x:Static properties:Resources.CurrentPersonWith}" Margin="10,0,5,0" x:Name="Option4" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="AncestorsComboBox" SelectedIndex="0" Width="39" Height="22" SelectionChanged="Ancestors_SelectionChanged">
+                            <ComboBoxItem>0</ComboBoxItem>
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                        </ComboBox>
+                        <Label Margin="0,0,0,4" Foreground="{DynamicResource InputFontColor}" Content="{x:Static properties:Resources.AncestralAnd}"/>
+                        <ComboBox x:Name="DescendantsComboBox"  SelectedIndex="0" Width="39" Height="22" SelectionChanged="Descendants_SelectionChanged">
+                            <ComboBoxItem>0</ComboBoxItem>
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                        </ComboBox>
+                        <Label Margin="0,0,0,4" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left" Content="{x:Static properties:Resources.DescendantGenerations}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="10,-5,0,0">
+                        <RadioButton GroupName="Html" Margin="0,0,5,0" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  Name="Option5" Height="16" VerticalAlignment="Center" Content="{x:Static properties:Resources.IfPersons}"></RadioButton>
+                        <ComboBox Height="22" MinWidth="110"  Name="searchfield" SelectionChanged="searchfield_SelectionChanged" SelectedIndex="-1" VerticalAlignment="Center" Width="Auto">
+                            <ComboBoxItem Content="{x:Static properties:Resources.Name}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.Age}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.BirthDate}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.DeathDate}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.BirthPlace}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.DeathPlace}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.Occupation}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.Education}"/>
+                            <ComboBoxItem Content="{x:Static properties:Resources.Religion}"/>
+                        </ComboBox>
+                        <Label Margin="0,0,0,4" Foreground="{DynamicResource InputFontColor}" Height="25" VerticalAlignment="Bottom" Content="{x:Static properties:Resources.Contains}"/>
+                        <TextBox Margin="0,0,5,0" x:Name="searchtext" Height="22" VerticalAlignment="Center" GotKeyboardFocus="searchtext_TextChanged" HorizontalAlignment="Right" Width="180"/>
+                    </StackPanel>
+                    <RadioButton GroupName="Html" Content="{x:Static properties:Resources.Events}" Margin="10,0,0,0" x:Name="Option6" Foreground="{DynamicResource InputFontColor}" Height="16" VerticalAlignment="Top" HorizontalAlignment="Left" Checked="Option6_CheckedChanged" Unchecked="Option6_CheckedChanged"/>
+
+                    <!--<Expander IsExpanded="True" Header="{x:Static properties:Resources.Options}" Height="Auto" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Width="Auto" Margin="5,0,0,0" >-->
+                        <StackPanel>
+                            <Label Margin="5,0,0,0" Foreground="{DynamicResource InputFontColor}" FontWeight="Bold" Content="{x:Static properties:Resources.Options}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                            <CheckBox Margin="10,5,0,0" Content="{x:Static properties:Resources.HideLivingPeople}" x:Name="PrivacyHtml" Foreground="{DynamicResource InputFontColor}" ToolTip="{x:Static properties:Resources.PrivacyTooltip}" />
+                            <CheckBox Margin="10,2,0,0" Content="{x:Static properties:Resources.ExportSourcesAndRepositories}" x:Name="SourcesHtml" Foreground="{DynamicResource InputFontColor}" ToolTip="{x:Static properties:Resources.SourcesExportTooltip}"/>
+                       </StackPanel>
+                    <!--</Expander>-->
+ 
+                        <StackPanel x:Name="OptionsPanel" Orientation="Horizontal" Margin="10,10,0,10">
+                            <Button Style="{DynamicResource RedButtonStyle}" Content="{x:Static properties:Resources.Export}" x:Name="ExportButton" Click="ExportButton_Click" HorizontalAlignment="Left" Width="Auto" MinWidth="60" Height="15"  />
+                            <Button Content="{x:Static properties:Resources.Cancel}" x:Name="CancelButton" Click="CancelButton_Click" Margin="5,0,0,0" Height="15" VerticalAlignment="Bottom"  Width="Auto" MinWidth="60" />
+                        </StackPanel>
+                    
+
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <!-- Footer -->
+        <Grid>
+            <Border Background="{DynamicResource BackgroundBrush}" Height="15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,5,5"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

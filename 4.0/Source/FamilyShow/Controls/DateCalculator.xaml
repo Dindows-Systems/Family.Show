@@ -1,0 +1,112 @@
+﻿<UserControl
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2006" 
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+  mc:Ignorable="d" x:Class="Microsoft.FamilyShow.DateCalculator" Width="Auto" >
+
+    <StackPanel MinWidth="410" Width="Auto">
+        <!-- Header -->
+        <Border Padding="5,0,5,0" Background="{DynamicResource BackgroundBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0" Height="30" Width="410" >
+            <Grid>
+                <TextBlock Padding="25,0,0,0" Text="{x:Static properties:Resources.DateCalculator}" TextWrapping="Wrap" Foreground="{DynamicResource HeaderFontColor}" FontSize="18" FontWeight="Bold" d:LayoutOverrides="Height" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <Image HorizontalAlignment="Left" Source="..\Images\Calculator.png"  Height="20" />
+                <Button Content="X" x:Name="CloseButton" Click="CancelButton_Click"  Height="15"  HorizontalAlignment="Right" Width="15" Style="{DynamicResource RedButtonStyle}"/>
+            </Grid>
+        </Border>
+
+        <!-- Content -->
+        <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,1,1,1" Width="410">
+            <Grid Background="{DynamicResource InputBackgroundBrush}" >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"/>
+                    <ColumnDefinition Width="55"/>
+                    <ColumnDefinition Width="55"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    
+                    
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="24"/>
+                    
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="3"/>
+                    
+
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" FontWeight="Bold" Grid.ColumnSpan="5" Content="{x:Static properties:Resources.DateCalculatorMessage}" Foreground="{DynamicResource InputFontColor}" Margin="0,0,12.223,0" />
+                <Label Grid.Row="1" FontWeight="Bold" Grid.ColumnSpan="5" Content="{x:Static properties:Resources.AgeBirthDeath}" Foreground="{DynamicResource InputFontColor}" Margin="0,0,12.223,0" />
+
+
+
+                <Label Grid.Row="2"  Margin="0,-3,0,0" Content="{x:Static properties:Resources.BirthDate}" Foreground="{DynamicResource InputFontColor}" />
+                <TextBox Grid.Row="2" Width="100" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left"  TextWrapping="NoWrap" x:Name="Date1TextBox"  Margin="5,0,5,0" Height="21.96" />
+
+                <Label Grid.Row="3"  Margin="0,-3,0,0" Content="{x:Static properties:Resources.DeathDate}" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"/>
+                <TextBox Grid.Row="3" Width="100" Grid.Column="1" Grid.ColumnSpan="2"  HorizontalAlignment="Left"  TextWrapping="NoWrap" x:Name="Date2TextBox"  Margin="5,0,5,0" Height="21.96" />
+               
+                <Label Grid.Row="4" Margin="0,-3,0,0" Content="{x:Static properties:Resources.Age}" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  />
+                <TextBox Grid.Row="4" Width="100" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" TextWrapping="NoWrap" x:Name="AgeTextBox"  Margin="5,0,5,0" Height="21.96" />
+                <Button Content="{x:Static properties:Resources.Calculate}" Grid.Row="4" Grid.Column="5" x:Name="CalculateButton" Click="CalculateButton_Click" HorizontalAlignment="Left" Margin="5,0,0,5"  Width="Auto" MinWidth="60" Height="15" VerticalAlignment="Bottom"  Style="{DynamicResource RedButtonStyle}"/>
+
+
+                
+                
+                <Image Grid.Row="3"  Grid.Column="3" HorizontalAlignment="Left" Source="..\Images\RightArrowBlue.png" Height="16"/>
+                <Image Grid.Row="4"  Grid.Column="3" HorizontalAlignment="Left" Source="..\Images\RightArrowBlue.png" Height="16"/>
+                <Image Grid.Row="2"  Grid.Column="3" HorizontalAlignment="Left" Source="..\Images\RightArrowBlue.png" Height="16"/>
+                
+                <Image Grid.Row="3"  Visibility="Hidden" Grid.Column="3" x:Name="Error1" HorizontalAlignment="Left" Source="..\Images\RightArrowRed.png" Height="16"/>
+                <Image Grid.Row="4"  Visibility="Hidden" Grid.Column="3" x:Name="Error2" HorizontalAlignment="Left" Source="..\Images\RightArrowRed.png" Height="16"/>
+                <Image Grid.Row="2"  Visibility="Hidden" Grid.Column="3" x:Name="Error3" HorizontalAlignment="Left" Source="..\Images\RightArrowRed.png" Height="16"/>
+               
+                <Label Grid.Row="2" Margin="18,-5,0,0" VerticalAlignment="Center" x:Name="BirthResult" FontWeight="Bold" Grid.Column="3" Grid.ColumnSpan="2"  Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  />
+                <Label Grid.Row="3" Margin="18,-5,0,0" VerticalAlignment="Center" x:Name="DeathResult" FontWeight="Bold" Grid.Column="3" Grid.ColumnSpan="2" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  />
+                <Label Grid.Row="4" Margin="18,-5,0,0" VerticalAlignment="Center" x:Name="AgeResult" FontWeight="Bold" Grid.Column="3" Grid.ColumnSpan="2" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  />
+          
+                <Label Grid.Row="5" FontWeight="Bold" Grid.ColumnSpan="5" Content="{x:Static properties:Resources.AddOrSubtract}" Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  />
+
+                <ComboBox x:Name="AddSubtractComboBox" Margin="5,0,5,0" Grid.Row="6" Height="21.96" SelectionChanged="AddSubtractComboBox_SelectionChanged" >
+                    <ComboBoxItem Content="{x:Static properties:Resources.Add}"/>
+                    <ComboBoxItem Content="{x:Static properties:Resources.Subtract}"/>
+                </ComboBox>
+                
+                
+
+                <Button Content="Calculate" Grid.Row="9" Grid.Column="4" x:Name="Calculate2Button" Click="Calculate2Button_Click" HorizontalAlignment="Left" Margin="5,0,0,5"  Width="Auto" MinWidth="60" Height="15" VerticalAlignment="Bottom"  Style="{DynamicResource RedButtonStyle}"/>
+                
+                <TextBox Grid.Row="6" Grid.Column="1"  TextWrapping="NoWrap" x:Name="DayBox"  Margin="5,0,0,0" HorizontalAlignment="Left" Height="21.96" Width="50"/>
+                <TextBox Grid.Row="7" Grid.Column="1"  TextWrapping="NoWrap" x:Name="MonthBox"  Margin="5,0,0,0" HorizontalAlignment="Left" Height="21.96" Width="50"/>
+                <TextBox Grid.Row="8" Grid.Column="1"  TextWrapping="NoWrap" x:Name="YearBox"  Margin="5,0,0,0" HorizontalAlignment="Left" Height="21.96" Width="50" />
+                <Label Grid.Row="6"  Grid.Column="2" Margin="0,-3,0,0" Content="{x:Static properties:Resources.days}" Foreground="{DynamicResource InputFontColor}"  />
+                <Label Grid.Row="7" Grid.Column="2"  Margin="0,-3,0,0"  Content="{x:Static properties:Resources.months}" Foreground="{DynamicResource InputFontColor}" />
+                <Label Grid.Row="8"  Grid.Column="2" Margin="0,-3,0,0" Content="{x:Static properties:Resources.years}" Foreground="{DynamicResource InputFontColor}"  />
+                <TextBox Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="NoWrap" x:Name="ToBox"  Margin="5,0,5,0" HorizontalAlignment="Left" Height="21.96" Width="100" />
+                <Label Grid.Row="9"  Margin="0,-3,0,0" HorizontalAlignment="Right" x:Name="DateTo" Grid.Column="0" Foreground="{DynamicResource InputFontColor}"  />
+
+                <Image Grid.Row="9"  Grid.Column="3" HorizontalAlignment="Left" Source="..\Images\RightArrowBlue.png" Height="16"/>
+                <Image Grid.Row="9" Visibility="Hidden" Grid.Column="3" x:Name="Error4" HorizontalAlignment="Left" Source="..\Images\RightArrowRed.png" Height="16"/>
+                <Label Grid.Row="9"  x:Name="Result2" Margin="18,-5,0,0" VerticalAlignment="Center" FontWeight="Bold" Grid.Column="3" Grid.ColumnSpan="2"  Foreground="{DynamicResource InputFontColor}" HorizontalAlignment="Left"  />
+
+            </Grid>
+
+        </Border>
+
+        <!-- Footer -->
+        <Grid Width="410" >
+            <Border Background="{DynamicResource BackgroundBrush}" Height="15" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,1,1" CornerRadius="0,0,5,5"/>  
+        </Grid>
+    </StackPanel>
+</UserControl>

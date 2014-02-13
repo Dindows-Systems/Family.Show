@@ -1,0 +1,54 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Microsoft.FamilyShow"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2006" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    x:Class="Microsoft.FamilyShow.AttachmentViewer"
+    xmlns:properties="clr-namespace:Microsoft.FamilyShow.Properties"
+    IsVisibleChanged="UserControl_IsVisibleChanged">
+    <UserControl.Resources>
+
+        <!-- Data Template for displaying the attachment item -->
+        <DataTemplate x:Key="AttachmentSetTemplate">
+            <TextBlock Text="{Binding Path=FileName, Mode=Default}"/>
+        </DataTemplate>
+
+    </UserControl.Resources>
+
+    <Border Margin="10,0,10,10" Style="{DynamicResource BorderStyle}" Background="{DynamicResource BackgroundBrush}" Width="Auto" Height="Auto">
+
+        <DockPanel>
+
+            <!-- Header Panel-->
+            <DockPanel Margin="0,0,10,0" DockPanel.Dock="Top" Height="30">
+                <Image Margin="10,0,0,0" VerticalAlignment="Center" Source="..\Images\Paperclip.png" Width="16" Height="16" />
+                <TextBlock Text="{x:Static properties:Resources.Attachments}" Style="{DynamicResource HeaderStyle}" FontWeight="Bold" Margin="5,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource HeaderFontColor}"/>
+                <Button Width="Auto" MinWidth="40" Content="{x:Static properties:Resources.Back}" Click="CloseButton_Click" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right" Height="15" x:Name="CloseButton" IsCancel="True" IsDefault="True" FontSize="10"/>
+            </DockPanel>
+
+            <Border CornerRadius="0,0,10,10" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,1,0,0" Background="{DynamicResource PersonInfoBackgroundBrush}">
+                <Grid DockPanel.Dock="Top" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Attachments List Box-->
+                    <Border Grid.Row="1" CornerRadius="10,10,10,10" Margin="10,10,10,10" BorderThickness="1,1,1,1" Padding="10,5,10,5" Background="{x:Null}"  Style="{DynamicResource DetailsBorderStyle}" >
+                        <Grid>
+                            <TextBlock HorizontalAlignment="Left" Foreground="{DynamicResource FontColor}" FontSize="10"><Run Text=""/></TextBlock>
+                            <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                                <ListBox Foreground="{DynamicResource FontColor}"  AllowDrop="False" ItemTemplate="{DynamicResource AttachmentSetTemplate}" ItemContainerStyle="{DynamicResource MediaStyleTemplate}" ScrollViewer.CanContentScroll="True" BorderThickness="0,0,0,0" x:Name="AttachmentsListBox" Background="{x:Null}" MouseDoubleClick="LoadSelectedAttachment" Margin="0,0,0,0"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </Border>
+
+                </Grid>
+            </Border>
+
+        </DockPanel>
+    </Border>
+</UserControl>
